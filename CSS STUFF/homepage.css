@@ -1,0 +1,222 @@
+body{
+    zoom: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 2500px 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 0;
+    padding: 0;
+}
+.startScreen{
+    grid-area: 1 / 1 / 2 / 7;
+    background: linear-gradient(0deg,rgb(1, 60, 51),rgb(0, 0, 0));
+    border-radius: 5%;
+    background-size: 300% 300%;
+    animation: backgroundColorTransition 10s ease-in-out infinite alternate;
+}
+@keyframes backgroundColorTransition {
+    0%{background-position: 0 50%;}
+    100%{}
+}
+.firstView{
+    animation: subtleGradient 2s infinite alternate;
+}
+.firstSen{
+    font-size: 1550%;
+    z-index: 1;
+    font-family: "Jersey 10", Courier, monospace;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(8, 252, 244, 0.398);
+    transition: transform 0.3s ease;
+}
+.firstSen:hover{
+    transform: rotate(-15deg) scale(1.3);
+}
+.jersey-10-regular {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+@keyframes subtleGradient{
+    0%{color:#12f8ca;}
+    100%{color: rgb(129, 255, 2)}
+}
+.bubbles{
+    z-index: -102;
+    display: flex;
+    border-radius: 5%;
+    justify-content: center;
+    justify-content: space-around;
+}
+.bubbles span{
+    width: 30px;
+    height: 30px;
+    background: rgba(73, 234, 156, 1);
+    border-radius: 90%;
+    box-shadow: 0 0 0 5px rgba(73, 234, 156, 0.4),
+    0 0 0 12px rgba(73, 234, 156, 0.2),
+    0 0 0 17px rgba(73, 234, 156, 0.1);
+    animation: bubblesAnimation 15s linear infinite;
+    animation-duration: calc(700s/var(--i));
+
+}
+.bubbles span:nth-child(even){
+    background: rgb(187, 255, 0);
+    box-shadow: 0 0 0 5px rgba(207, 234, 73, 0.4),
+    0 0 0 12px rgba(213, 234, 73, 0.2),
+    0 0 0 17px rgba(213, 234, 73, 0.1);
+}
+@keyframes bubblesAnimation{
+    0%{transform: translateY(100vh) scaleY(0) scaleX(0);}
+    100%{transform: translateY(-10vh) scaleY(1) scaleX(1.5);}
+}
+.thisistext{
+    font-family:Impact, sans-serif;
+    font-size:1500%;
+    color:rgb(187, 255, 0);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(8, 252, 244, 0.398);
+}
+.HomepageName{
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    transform:translateX(-70px) scale(450%);
+    animation: namecourseAnimation 1s infinite alternate cubic-bezier(.21,.57,.87,.54);
+}
+.HomePageCourse{
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    transform:  scale(450%);
+    animation: namecourseAnimation 1s infinite alternate cubic-bezier(.21,.57,.87,.54);
+}
+@keyframes namecourseAnimation{
+    /*
+        https://cubic-bezier.com/
+    */
+    0%{
+        transform:translateY(50px);
+        color:#d4ff00;
+    }
+    100%{
+        color:#12f84f;
+    }
+}
+section{
+    display:grid;
+    place-items:center;
+    align-content:center;
+    height:750px;
+    color:#12f88c;
+    
+    /*
+https://github.com/baunov/gradients-bg
+
+    */
+}
+.fadeIn{
+    opacity: 0;
+    scale:50%;
+    transition: all 1.5s;
+}
+.fadingIn{
+    opacity: 1;
+    scale:100%;
+    color:#12f88c;
+}
+.portfolioicon{
+    transform: scale(1);
+    z-index: 100;
+    animation: iconAnimation 1s ease-in-out alternate infinite;
+    transition: transform 1s ease-in-out;
+}
+.portfolioicon:hover{
+    transform: rotate(180deg) scale(2);
+    filter: hue-rotate(180deg); 
+}
+@keyframes iconAnimation {
+    0%{
+        transform: translateX(50px);
+        filter: hue-rotate(-50deg);
+    } 100%{
+        transform: translatex(-50px);
+    }
+}
+.navBar{
+    grid-area: 2 / 2 / 3 / 6;
+    background-color: #011e1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    /*
+https://cssbuttons.app/buttons/41
+    */
+}
+.navBarButton {
+    padding: 10px;
+    font-family: "Roboto", sans-serif;
+    width:200px;
+    font-weight: 900;
+    background: transparent;
+    outline: none !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    border-radius: 5%;
+}
+.navBarButton:hover{
+    box-shadow: 0 0 0 5px rgba(217, 248, 17, 0.4),
+    0 0 0 12px rgba(217, 248, 17, 0.2),
+    0 0 0 17px rgba(217, 248, 17, 0.1);
+}
+.navBarButton:active{
+    box-shadow: 0 0 0 5px rgba(17, 248, 221, 0.4),
+    0 0 0 12px rgba(17, 229, 248, 0.2),
+    0 0 0 17px rgba(17, 225, 248, 0.1);
+}
+.navBarButtonTransition {
+  border: 2px solid rgb(73, 234, 156);
+  z-index: 1;
+  color: rgb(73, 234, 156);
+}
+.navBarButtonTransition:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: rgb(73, 234, 156);
+  transition: all 0.3s ease;
+}
+.navBarButtonTransition:hover {
+  color: #011e1b;
+}
+.navBarButtonTransition:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.navBarButtonTransition:active {
+  border: 20px;
+}
+.emerald {
+    transition: filter 0.6s ease;
+    transition: transform 0.3s ease;
+}
+.emerald:hover {
+    transform: rotate(-12deg);
+    filter: hue-rotate(-65deg);
+}
+.emerald2 {
+    transition: filter 0.6s ease;
+    transition: transform 0.3s ease;
+}
+.emerald2:hover {
+    transform: rotate(12deg);
+    filter: hue-rotate(-65deg);
+}

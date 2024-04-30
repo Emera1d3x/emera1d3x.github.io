@@ -1,0 +1,20 @@
+body{
+    zoom: 75%;
+    color: #12f88c;
+    background-color: #000000;
+    cursor: url('Pictures\Emerald.png'), cell;
+}
+body::-webkit-scrollbar{
+    width:0.65rem;
+}
+body::-webkit-scrollbar-track{
+    background-color: black;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(0, 44, 43);
+    border-radius: 25%;
+}
+@font-face{
+    font-family: Jersey-10;
+    src: url('Fonts/Jersey10-Regular.ttf')
+}
