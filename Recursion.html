@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sehan Munir Portfolio - Recursion</title>
+    <link rel="stylesheet" href="CSS STUFF/general.css">
+    <link rel="stylesheet" href="CSS STUFF/page.css">
+</head>
+<body class="parent">
+    <div class="headSection">
+        <h1 class="title"><span style="color: rgb(0, 142, 83);">{ICS40}</span>//Recursion</h1>
+    </div>
+    <div class="content">
+        <br>
+        <a href="pageICS4AP.html" target="_self">
+            <button class="backButton">&lt;&lt; Back</button>
+        </a>
+        <div>
+            <h1 class="ooptext"> <br>In <span style="color:rgb(255, 0, 0)">Computer Science</span>,
+                recursion is a very powerful tool. Recursion is the process in which
+                a method/function calls itself, thus creating a loop. This loop can be 
+                very useful, it can do a repetitive task with little code, 
+                and breakdown a complicated problem in to smaller managable steps.
+            </h1>
+            <p class="regText">
+                Here is some code of a method calling itself, which is recursion:
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Recursive Counter)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">public void</span> <span style="color:rgb(82, 255, 63)">counter</span> (<span style="color:rgb(47, 175, 255)">int</span> variablePassed){<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">System</span>.<span style="color:rgb(163, 221, 195)">out</span>.<span style="color:rgb(47, 175, 255)">println</span>(variablePassed);<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(82, 255, 63)">counter</span>(variablePassed+1); <span style="color:rgba(255, 255, 255, 0.36)">// Calling itself, thus creating a loop</span><br> 
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp }
+                <br><br>
+            </p>
+            <p class="regText">
+                In Java, a recursive call is put on a "stack". 
+                Say you are calling a method within itself, this adds
+                a method call on top of the stack. You can think of the 
+                stack data-structure as a stack of books. If you put too 
+                much books on top of eachother, eventuallly you'll build 
+                too high and hit the ceiling, thus leading to the error 
+                of having too much information and running out 
+                of space. In Java this is known as a 
+                Stack Overflow Error (the bane of my existence)  - when 
+                there are way too many calls (this usually happens
+                when you have a logic error). 
+                In order to stop the infinite method calls, you must 
+                have a base case. A base case is a condition within the recursive
+                loop, which stops the recursive calls from continuing.
+            </p>
+            <p class="regText">
+                Here is the code but with a base case stopping the printing 
+                when the integer being passed through is 100.
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Recursive Counter with Base Case)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">public void</span> <span style="color:rgb(82, 255, 63)">counter</span> (<span style="color:rgb(47, 175, 255)">int</span> variablePassed){<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">System</span>.<span style="color:rgb(163, 221, 195)">out</span>.<span style="color:rgb(47, 175, 255)">println</span>(variablePassed);<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(255, 177, 237)">if</span> (variablePassed!=100) <span style="color:rgba(255, 255, 255, 0.36)">// Base case stopping infinite loop</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(82, 255, 63)">counter</span>(variablePassed+1);<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp }
+                <br><br>
+            </p>
+            <p class="regText">
+                Here is a visualization of what a call stack would look like for getting factorials:
+            </p>
+            <div style="display:grid; justify-content: center ;">
+                <image class="imagerainbowthing" src="Pictures/FactorialCallStack.png"></image>
+            </div> 
+            <h1 class="ooptext"><br> Recursion Implementation: Collatz Conjecture
+            </h1>
+            <p class="regText">
+                For the recursion example I decided to make an implementation of a math problem called Collatz Conjecture.
+                <br> (I didn't really want a factorial or 
+                fibonacci sequence calculator, that has probably
+                already been done millions of time before)
+                <br> I got inspired by this cool video I watched a few years ago: <a href="https://www.youtube.com/watch?v=094y1Z2wpJg" target=_blank title="(Veritasium's 3n+1 Video)">YoutubeLink</a>
+            </p>
+            <p class="regText">
+                This is how the formula works. Given a number, if it is 
+                even, divide it by two, if it is odd, multiply it by 3 and add 1.
+                What makes this problem so unique is that when you track the "life"
+                of a number as it continiously iterates, its "adventures" are 
+                very interesting and seem random. With all numbers, it eventually 
+                "settles" down and reaches 1 (my program eliminates the base loop to avoid stack overflow). If you use
+                any natural numbers and cause a stackoverflow (assuming Java is perfect), 
+                you found the first ever cycle (apart from the base loop). This program goes through the lifespan of user input and 
+                outputs the peak number it reaches:
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Finding Maximum Collatz Conjecture)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">public int</span> <span style="color:rgb(106, 255, 47)">findMaxCollatzConjecture</span>(<span style="color:rgb(47, 175, 255)">int</span> n, <span style="color:rgb(47, 175, 255)">int</span> max){<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">System</span>.<span style="color:rgb(163, 221, 195)">out</span>.<span style="color:rgb(47, 175, 255)">println</span>(n);<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(255, 172, 227)">if</span> (n==1) <span style="color:rgba(255, 255, 255, 0.36)">// Base Case (Prevents Infinite Loop)</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 172, 227)">return</span> max;<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 172, 227)">if</span> (n%2==1)<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 172, 227)">return</span> <span style="color:rgb(106, 255, 47)">findMaxCollatzConjecture</span>((3*n+1), <span style="color:rgb(163, 221, 195)">Math</span>.<span style="color:rgb(47, 175, 255)">max</span>(max,n)); <span style="color:rgba(255, 255, 255, 0.36)">// Recursive Call (Returns next term's answer)</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 172, 227)">else</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 172, 227)">return</span> <span style="color:rgb(106, 255, 47)">findMaxCollatzConjecture</span>((n/2), <span style="color:rgb(163, 221, 195)">Math</span>.<span style="color:rgb(47, 175, 255)">max</span>(max,n)); <span style="color:rgba(255, 255, 255, 0.36)">// Recursive Call (Returns the next term's answer)</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">9</span> &nbsp &nbsp }<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">10</span> <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">11</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">public static void</span> main(<span style="color:rgb(47, 175, 255)">String</span>[] args){<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">12</span> &nbsp &nbsp &nbsp &nbsp Main z = <span style="color:rgba(255, 172, 227)">new</span> Main();<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">13</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">Scanner</span> s = <span style="color:rgba(255, 172, 227)">new</span> <span style="color:rgb(47, 175, 255)">Scanner</span>(<span style="color:rgb(163, 221, 195)">System</span>.<span style="color:rgb(163, 221, 195)">in</span>);<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">14</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> check = s.<span style="color:rgb(47, 175, 255)">nextInt</span>();<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">15</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">System</span>.<span style="color:rgb(163, 221, 195)">out</span>.<span style="color:rgb(47, 175, 255)">println</span>(<span style="color:rgb(255, 199, 6)">"The max is: "</span>+z.<span style="color:rgb(106, 255, 47)">findMaxCollatzConjecture</span>(check, 1));<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">16</span> &nbsp &nbsp }
+                <br><br>
+            </p>
+            
+            
+        </div>
+            <div class="backToTopDiv">
+                <image class="arrow" src="Pictures/ArrowGif.gif"></image>
+                <br>
+                <button class="backToTop" onclick='window.scrollTo({top: 0, behavior: "smooth"});'>
+                    Go Back Up
+                </button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sehan Munir Portfolio - Object Oriented Programming</title>
+    <link rel="stylesheet" href="CSS STUFF/general.css">
+    <link rel="stylesheet" href="CSS STUFF/page.css">
+    <script defer src="JavaScript STUFF/collapsetable.js"></script>
+</head>
+<body class="parent">
+    <div class="headSection">
+        <h1 class="title"><span style="color: rgb(0, 142, 83);">{ICS40}</span>//Objected Orieinted Programming</h1>
+    </div>
+    <div class="content">
+        <br>
+        <a href="pageICS4AP.html" target="_self">
+            <button class="backButton">&lt;&lt; Back</button>
+        </a>
+        <div>
+            <h1 class="ooptext"><span style="color: rgb(159, 242, 159);">Object Oriented Programming</span> (shortened as <span style="color: rgb(159, 242, 159);">OOP</span>) is a programming 
+                concept based on real world objects. The belief is that we can 
+                effectively create anything we see in the real world in code 
+                and better. Some of its main concepts (which were focused on
+                 in this course) are <span style="color:rgb(255, 0, 0); font-family: 'Courier New', Courier, monospace;">Encapsulation</span>, <span style="color:rgb(0, 255, 255); font-family: 'Courier New', Courier, monospace;">Inheritance</span>, <span style="color:rgb(255, 204, 0); font-family: 'Courier New', Courier, monospace;">Polymorphism</span>,
+                 and <span style="color:rgb(0, 255, 17); font-family: 'Courier New', Courier, monospace;">Abstraction</span>. These ideas are a foundation, and
+                 <span style="color: rgb(159, 242, 159);">object oriented programming languages</span> such as Java☕, Python🐍, C++ ©️ or C# #️⃣support this with
+                memory allocation, references and effectively a complex system
+                of transisters that take in input, and produce output.</h1>
+            <h1 class="ooptext">Why might one even go through the hassle
+                of creating so called "<span style="color: rgb(159, 242, 159);">△ objects ◎</span>"? Benefits include code-reusability,
+                code-maintainability, a well structured system, security, flexibility,
+                and more.
+            </h1>
+            <h1 class="ooptext">First, lets take a very brief look at what
+                the four main <span style="color: rgb(159, 242, 159);">OOP</span> topics taught in this course means conceptually.
+            </h1>
+            <div class="basicdefinition">
+                <p class="div1"><span style="color:rgb(255, 0, 0);"> - Encapsulation</p>
+                <p class="basicdefinitiontext div2" style="padding-bottom: 0px; padding-top: 0px; margin-top: 0px; margin-bottom: 0px; text-shadow: 0px 0px 30px rgba(255, 0, 0, 0.805);"> &nbsp &nbsp Encapsulation refers to having variables (attributes) and
+                    methods (functions/abilities) bundled up into a singular
+                    unit (class) which may have the ability to be private
+                    and/or gatekeep certain information. It helps achieve 
+                    data-hiding. Its internal details are hidden from outside
+                    itself, but it allows for interactions which are black-boxed
+                    and kept safe.
+                </p>
+                <image src="Pictures/Encapsulation.png" class="icon div3"></image>
+                <p class="div4"style="padding-bottom: 0px; padding-top: 0px; margin-top: 0px; margin-bottom: 0px;"><span style="color:rgb(0, 255, 255)"> - Inheritance</p>
+                <p class="basicdefinitiontext div5" style="padding-bottom: 0px; padding-top: 0px; margin-top: 0px; margin-bottom: 0px;  text-shadow: 0px 0px 30px rgba(0, 242, 255, 0.621);"> &nbsp &nbsp Inheritance is the ability for a child object to "inherit" or 
+                    get passed on traits, attributes, and abilities from 
+                    a "parent" object. This enables the new derived class to have
+                    the relationship "is-a" with it's base class + have its own
+                    unique factors - kind of like an evolution.
+                </p>
+                <image src="Pictures/Inheritence.png" class="icon div6"></image>
+                <p class="div7"><span style="color:rgb(255, 204, 0)" style="padding-bottom: 0px; padding-top: 0px; margin-top: 0px; margin-bottom: 0px;"> - Polymorphism</p>
+                <p class="basicdefinitiontext div8" style="padding-bottom: 0px; padding-top: 0px; margin-top: 0px; margin-bottom: 0px;  text-shadow: 0px 0px 30px rgba(246, 255, 0, 0.637);"> &nbsp &nbsp Polymorpism is the ability for something to have different 
+                    forms. In computer science, it is specifically
+                    children classes implementing and morphing its own unique features
+                    with the parent class. In Java, it is said that there is an Object 
+                    class at the top of the class hierachy. From that, there are childrens
+                    all of which have unique features some concrete, some abstract, together
+                    creates the programs that we use every day.
+                </p>
+                <image src="Pictures/Polymorphism.png" class="icon div9" style="padding-bottom: 0px; padding-top: 0px; margin-top: 0px; margin-bottom: 0px;"></image>
+                <p class="div10"><span style="color:rgb(0, 255, 17)" style="padding-bottom: 0px; padding-top: 0px; margin-top: 0px; margin-bottom: 0px;"> - Abstraction</p>
+                <p class="basicdefinitiontext div11" style=" text-shadow: 0px 0px 30px rgba(0, 255, 42, 0.623);"> &nbsp &nbsp Abstraction is the idea that you can have 
+                    literally anything as an object. You can even have
+                    abstract and unreal ideas, those of which that may
+                    be abstract classes or interfaces which as ideas
+                    such as so called variables and methods, but are not 
+                    properly/literally defined. This gives programmers the 
+                    ability to start with any concept they can think of and work
+                    there way "down" by slowly adding definitions to their idea.
+                    This promotes code code-maintainability, organization
+                    and helps code become scalable.
+                </p>
+                <image src="Pictures/Abstraction.png" class="icon div12"></image>
+            </div>
+        </div>
+        <br>
+        <div class="info">
+            <h1 class="headerText"> &nbsp &nbsp So, how are these concepts represented in Java?</h1>
+            <p class="regText">&nbsp &nbsp In Java, an object is an instance of a
+                class. A class is essentially a self contained chunk of code which 
+                is a template/blueprint to what the general type of object
+                should be. Lets use an example. Say we want to have an object of a Blue-Jay.
+                In order to create this specific bird, we must first have a class or
+                blueprint which defines exactly what a general bird is. This definition 
+                within the class contains various different attributes which the 
+                bird has (represented as variables) and various
+                different functions that a bird may do (represented as methods).
+                <br> So, lets outline some properties of a bird.
+            </p>
+            <image src="Pictures/Bird.png" style="padding-left:47%; filter:hue-rotate(-70deg)"></image>
+            <p class="regText"> A bird has various different attributes/properties, some of which are it's:</p>
+            <ul style="font-size: 200%; margin-left: 15%; color:rgb(240, 255, 244)">
+                <li> Height </li>
+                <li> Weight </li>
+                <li> Colour </li>
+                <li> Wingspan </li>
+                <li> DNA</li>
+                <li> Things it may eat</li>
+            </ul>
+            <p class="regText"> A bird has various different things that it has the ability to do. Some of which are:</p>
+            <ul style="font-size: 200%; margin-left: 15%; color:rgb(240, 255, 244)">
+                <li> Walking </li>
+                <li> Hunting </li>
+                <li> Eating </li>
+                <li> Flying </li>
+            </ul>
+            <p class="regText">By adding more and more information to these lists of 
+                properties and abilities, we get closer and closer to 
+                defining what the concept of a bird is!
+            </p>
+            <h1 class="headerText"> &nbsp &nbsp Unified Modeling Language</h1>
+            <p class="regText">Unified Modeling Language (shortened for UML),
+                is a universal standard way to organize all of this information and put them 
+                into a diagram.
+            </p>
+            <p class="regText">Here is the format for a basic class in UML:</p>
+            <image src="Pictures/UMLDefault.png" class="uml"></image>
+            <p class="regText">In UML, "+" may replace public, "-" may replace private, and "#" may replace protected</p>
+            <p class="regText">Now lets add our information about the Bird Class, containing informations
+                about a barebones bird:
+            </p>
+            <image src="Pictures/UMLBird.png" class="uml"></image>
+            <p class="regText">Congrats! You have now defined what a BIRD is!</p>
+            <p class="regText">Lets convert this to code:</p>
+            <p class="codeSection">
+                <br>
+                &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">File Name:</span> Bird.java <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)"> class</span> Bird { <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Attributes / Variables</span> <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">double</span> height; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">double</span> weight; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">String</span> colour; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">double</span> wingspan; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">String</span> dna; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">String</span> food; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">9</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Constructor</span> <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">10</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> Bird (<span style="color:rgb(47, 255, 203)">double</span> height, <span style="color:rgb(47, 175, 255)">double</span> weight, <span style="color:rgb(47, 175, 255)">String</span> colour, <span style="color:rgb(47, 175, 255)">double</span> wingspan, <span style="color:rgb(47, 175, 255)">String</span> dna, <span style="color:rgb(47, 175, 255)">String</span> food){ <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">11</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">this</span>.height = height;<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">12</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">this</span>.weight = weight;<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">13</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">this</span>.colour = colour;<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">14</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">this</span>.wingspan = wingspan;<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">15</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">this</span>.dna = dna;<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">16</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">this</span>.food = food;<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">17</span> &nbsp &nbsp &nbsp }<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">18</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Functions / Methods</span><br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">19</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">void</span> walk (<span style="color:rgb(47, 175, 255)">int</span> dist, <span style="color:rgb(47, 175, 255)">String</span> direction){ <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">20</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// implemention not shown</span> <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">21</span> &nbsp &nbsp &nbsp }<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">22</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">boolean</span> hunt (){ <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">23</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// implemention not shown</span> <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">24</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// would return true for found something in hunt, false for did not find anything</span> <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">25</span> &nbsp &nbsp &nbsp }<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">26</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 175, 255)">void</span> eatInventory (){ <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">27</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// implemention not shown</span> <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">28</span> &nbsp &nbsp &nbsp }<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">29</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">void</span> fly (){ <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">30</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// implemention not shown</span> <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">31</span> &nbsp &nbsp &nbsp }<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">32</span> &nbsp &nbsp } <br>
+                <br>
+            </p>
+            <p class="regText">To reiterate, we have just created the barebones and defined what a Bird is using Java Class.</p>
+            <p class="regText">However, to create an actual object, we need to instantiate
+                the Bird class with specifics that define what 
+                our specific Blue-Jay is. This can be done through
+                the constructor like this:
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (IN ANOTHER FILE) <br>
+                <br>
+                &nbsp &nbsp 1 &nbsp &nbsp // Lets Create an Instance Of This Class <br>
+                &nbsp &nbsp 2 &nbsp &nbsp // To be like a blue-jay! <br>
+                &nbsp &nbsp 3 &nbsp &nbsp // (Class name = new Class's Constructor and Parameters())</span> <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">Bird</span> <span style="color:rgb(163, 221, 195)">blueJay</span> = <span style="color:rgb(47, 255, 130)">new</span> <span style="color:rgb(47, 175, 255)">Bird</span>(14.5, 65.0, "Blue", 34.0, "Cyanocitta cristata:80 chrm:fjlak32wes", "worm"); <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5 &nbsp &nbsp // The "new" keywored is used to create a new instance of a class<br>
+                &nbsp &nbsp 6 &nbsp &nbsp // As shown, parameters for constructor are filled</span><br>
+                <br>
+            </p>
+            <p class="regText"> And there we have a new bird object with the properties that a 
+                blue-jay may have! But what if we want to implement
+                the new object's functions? We can do this by using 
+                dot notation upon an object.
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (IN ANOTHER FILE) <br>
+                <br>
+                &nbsp &nbsp 1 &nbsp &nbsp // Lets make this bluejay hunt!<br>
+                &nbsp &nbsp 2 &nbsp &nbsp // Object(Bird) bluejay must use hunt method <br>
+                &nbsp &nbsp 3 &nbsp &nbsp // Object.method(); <br>
+                &nbsp &nbsp 4 &nbsp &nbsp // Dot notation is using a specific object/instance dot method <br>
+                &nbsp &nbsp 5 &nbsp &nbsp // So Java knows what object is performing the method<br>
+                &nbsp &nbsp 6 &nbsp &nbsp  </span><span style="color:rgb(163, 221, 195)">bluejay</span>.<span style="color:rgb(47, 175, 255)">hunt</span>();<span style="color:rgba(255, 255, 255, 0.36)"><br>
+                &nbsp &nbsp 7 &nbsp &nbsp // Doesn't the hunt method have a boolean return type?<br>
+                &nbsp &nbsp 8 &nbsp &nbsp // Lets see if it caught anything: <br>
+                &nbsp &nbsp 9</span> &nbsp &nbsp <span style="color:rgb(163, 221, 195)">System</span>.<span style="color:rgb(163, 221, 195)">out</span>.<span style="color:rgb(47, 175, 255)">println</span>(<span style="color:rgb(251, 100, 125)">"bluejay.hunt()"</span>); <span style="color:rgba(255, 255, 255, 0.36)"><br>
+                <br>
+                &nbsp &nbsp &nbsp &nbsp (Output Console) <br>
+                &nbsp &nbsp 1 &nbsp &nbsp true<br>
+                <br>
+            </p>
+            <p class="regText">These are the basics to how Java operates.
+                In reality, the entirety of Java is just a bunch of 
+                classes that have a defined structure/bluprint. We use these 
+                blueprints and instantiate objects with information to perform
+                basically anything possible!
+            </p>
+            <p class="regText">And now you know the very basics of Classes and Object Oriented Programming!</p>
+            <br>
+            <div class="sections">
+            <div class="collapsible">
+                <button class="collapsible-btn">Open/Close <span style="color:red">ENCAPSULATION</span></button>
+                <div class="collapsiblecontent">
+                    <h1 class="headerText encapsHeader"> &nbsp &nbsp Encapsulation Example</h1>
+                    <p class="regText"> As stated previously, 
+                        Encapsulation is essentially the ability for a 
+                        chunk of code (in this case a class) to be self contained
+                        and have data-hiding. The class allows for some information
+                        to be directly given while others to be protected. Lets 
+                        adjust our Bird class to implement this idea!
+                    </p>
+                    <p class="regText"> Lets begin by making all variables private!
+                    </p>
+                    <p class="codeSection">
+                        <br>
+                        &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">File Name:</span> Bird.java <br>
+                        <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)"> class</span> Bird { <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Attributes / Variables</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">double</span> height; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">double</span> weight; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">String</span> colour; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">double</span> wingspan; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">String</span> dna; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">String</span> food; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">9</span> &nbsp &nbsp } <br>
+                        <br>
+                    </p>
+                    <p class="regText"> 
+                        Now all variables are not directly accessible from external 
+                        sources. Private class variables may
+                        be accessed from everywhere within its own class
+                        but not from others. <br>
+                        Object.VariableName; ←← now leads to a syntax error.
+                    </p>
+                    <p class="regText">
+                        However, in practical uses this is not good.
+                        We want a bird object to exists and be 
+                        contained within itself, but we also want to 
+                        observe these attributes and maybe make 
+                        some changes. We can achieve observation and mutation
+                        of a class indirectly by using get methods
+                        and set methods.
+                    </p>
+                    <p class="regText">
+                        GET methods are public methods which returns private attribute values.
+                        <br>
+                        SET methods are public methods which indirectly allow mutation of attribute's value.
+                    </p>
+                    <p class="regText">
+                        For each variable that the Bird class has,
+                        lets allow external sources to indirectly "observe"
+                        its attributes and mutate them.
+                    </p>
+                    <p class="codeSection">
+                        <br>
+                        &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">File Name:</span> Bird.java <br>
+                        <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)"> class</span> Bird { <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Attributes / Variables</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">double</span> height; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">double</span> weight; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">String</span> colour; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">double</span> wingspan; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">String</span> dna; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">String</span> food; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">9</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Constructor</span> <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">10</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// GET METHODS</span><br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">11</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">double</span> getHeight(){ <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">12</span> &nbsp &nbsp &nbsp &nbsp &nbsp return height; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">13</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">14</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">double</span> getWeight(){ <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">15</span> &nbsp &nbsp &nbsp &nbsp &nbsp return weight; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">16</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">17</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">String</span> getColour(){ <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">18</span> &nbsp &nbsp &nbsp &nbsp &nbsp return colour; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">19</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">19</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">double</span> getWingspan(){ <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">20</span> &nbsp &nbsp &nbsp &nbsp &nbsp return wingspan; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">21</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">22</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">String</span> getDNA(){ <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">23</span> &nbsp &nbsp &nbsp &nbsp &nbsp return dna; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">24</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">25</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">String</span> getFood(){ <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">26</span> &nbsp &nbsp &nbsp &nbsp &nbsp return food; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">27</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">28</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// SET METHODS</span><br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">29</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">void</span> setHeight(double height){ <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">30</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">this</span>.height = height;<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">31</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">32</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">void</span> setWeight(double weight){ <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">33</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">this</span>.weight = weight;<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">34</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">35</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">void</span> setColour(String colour){ <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">36</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">this</span>.colour = colour;<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">37</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">38</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">void</span> setWingspan(double wingspan){ <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">39</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">this</span>.wingspan = wingspan;<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">40</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">41</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">void</span> setDNA(String dna){ <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">42</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">this</span>.dna = dna;<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">43</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">44</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">void</span> setFood(String food){ <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">45</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">this</span>.food = food;<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">46</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">47</span> &nbsp &nbsp } <br>
+                        <br>
+                    </p>
+                    <p class="regText">
+                        As you can see, now for every attribute it has a way of
+                        getting accessed externally with get methods, and 
+                        every attribute can get mutated with the set methods. The 
+                        set methods take in a parameter, and assign its 
+                        attribute value to the external parameter, while the get 
+                        method returns a copy of its attribute value.
+                    </p>
+            </div>
+            <br>
+            <div class="collapsible2">
+                <button class="collapsible-btn2">Open/Close <span style="color:blue">INHERITANCE</span></button>
+                <div class="collapsiblecontent2">
+                    <h1 class="headerText inheriHeader"> &nbsp &nbsp Inheritance Example</h1>
+                    <p class="regText"> Inheritance is the ability for another class
+                        to have the properties of another. The inheriting class
+                        is known as a subclass or child and the class that is being 
+                        inherited is called a superclass or parent. Below shows 
+                        the relationship between the two clases in terms of 
+                        UML: 
+                    </p>
+                    <image src="Pictures/UMLInheritance.png" class="uml"></image>
+                    <p class="regText"> Here is the implementation in java:
+                    </p>
+                    <p class="regText"> Here is a superclass, Animal:
+                    </p>
+                    <p class="codeSection">
+                        <br>
+                        &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">File Name:</span> Animal.java <br>
+                        <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Example class of an Animal with general inforamtion</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)"> class</span> Animal { <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Attributes / Variables</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">double</span> height; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">double</span> weight; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Constructor</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">Animal</span>(<span style="color:rgb(47, 255, 203)">int</span> height, <span style="color:rgb(47, 255, 203)">int</span> weight){ <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8</span> &nbsp &nbsp &nbsp &nbsp &nbsp this.height = height; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">9</span> &nbsp &nbsp &nbsp &nbsp &nbsp this.weight = weight; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">10</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">11</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Some Methods</span><br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">12</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">double</span> getHeight(){ <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">13</span> &nbsp &nbsp &nbsp &nbsp &nbsp return height; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">14</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">15</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">double</span> getWeight(){ <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">16</span> &nbsp &nbsp &nbsp &nbsp &nbsp return weight; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">17</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">18</span> &nbsp &nbsp } <br>
+                        <br>
+                    </p>
+                    <p class="regText"> Now that we have a general superclass defining very general properties of all animals, lets INHERIT these
+                        very general properties of an Animal and create a Bird subclass. We're doing this because a Bird is-a Animal, but has more specific properties. 
+                    </p>
+                    <p class="regText"> To make a subclass, we use the keyword "extends" as shown here:
+                    </p>
+                    <p class="codeSection">
+                        <br>
+                        &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">File Name:</span> Bird.java <br>
+                        <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Bird class extends the attributes and functionalities of an Animal</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)"> class</span> Bird <span style="color:rgb(47, 255, 241)">extends</span> <span style="color:greenyellow">Animal</span> { <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Attributes / Variables</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Although not explicitly stated, Bird inherits the variables of Animal.</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Some methods</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Although not explicitly stated, Bird inherits the methods of Animal.</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp } <br>
+                        <br>
+                    </p>
+                    <p class="regText"> Now this Bird class on its own isn't really too useful. Yes it has the properties of an Animal, but its nothing more.
+                        In order to be an effective use of "extends", we should define some specific properties and functions only unique to Bird.
+                    </p>
+                    <p class="regText"> In this chunk of code, Bird class adds new unique properties.
+                    </p>
+                    <p class="codeSection">
+                        <br>
+                        &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">File Name:</span> Bird.java <br>
+                        <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Bird class extends the attributes and functionalities of an Animal</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)"> class</span> Bird <span style="color:rgb(47, 255, 241)">extends</span> <span style="color:greenyellow">Animal</span> { <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Attributes / Variables</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Although not explicitly stated, Bird inherits the variables of Animal.</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// The attribute of wingspan is a property that all bird's have, but not all animals do.</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">double</span> wingspan; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Some methods</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Although not explicitly stated, Bird inherits the methods of Animal.</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">9</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">double</span> getWingspan(){ <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">10</span> &nbsp &nbsp &nbsp &nbsp &nbsp return wingspan; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">11</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">12</span> &nbsp &nbsp } <br>
+                        <br>
+                    </p>
+                    <p class="regText"> All animals have a certain height or weight, but not all animals have wingspan. However all birds have a wingspan.
+                    </p>
+                    <p class="regText"> When creating a subclass, we may also add additional constructors specific to the subclass. Maybe 
+                        a constructor in Bird allows itself to be created with a specified wingspan.
+                    </p>
+                    <p class="regText"> Now you know the very basics to superclasses and subclases.
+                    </p>
+                    <p class="regText"> Some additional things you need to know are:</p>
+                    <ul style="font-size: 200%; margin-left: 15%; color:rgb(240, 255, 244)">
+                        <li> SubClassObject.SuperClassPublicMethod(); works! This is once again due to inheritance</li>
+                        <li> Superclass variables may create a new Subclass object (Superclass var = new Subclass();), but the Subclass's true 
+                            usages will never be used until the Superclass gets downcasted to a Subclass object type. </li>
+                        <li> A Superclass can create a new Subclass object, but a Subclass cannot create a new Superclass object.<br> 
+                        Superclass var = new Subclass(); ✅ <br>
+                        Subclass var = new Superclass(); ❌</li>
+                        <li> Overriding is when a subclass has a function named the same as it's superclass. <br> 
+                        More of this will be explained in the Polymorphism topic</li>
+                        <li> A subclass << is-a >> superclass, but a superclass is not a subclass </li>
+                        <li> A class may only inherit from or "extend" one class. </li>
+                        <li> However, you may have an entire tree of inheritence - where an overarching class gets extended by different
+                            independant subclasses, and those subclass get extended by others. Here is an example which attempts to emulate what 
+                        happens in nature. <br> 
+                        <br> 
+                        <br> 
+                        <image src="Pictures/Tree.png" class="uml imagerainbowthing"></image>
+                        </li><br><br>
+                        <li>The keyword super(); in a subclass is used to refer to its superclass properties, more about this can be found in Polymorphism</li>
+                    </ul>
+            </div>
+            <br>
+            <div class="collapsible3">
+                <button class="collapsible-btn3">Open/Close <span style="color:yellow">POLYMORPHISM</span></button>
+                <div class="collapsiblecontent3">
+                    <h1 class="headerText polyHeader"> &nbsp &nbsp Polymorphism Example</h1>
+                    <p class="regText"> As we know from inheritence, subclasses inherit the functions and attributes of their superclass.
+                        The idea of Polymorphism and its implementations in Java build on this and allow subclasses to 
+                        redefine what superclass' method does. This essentially allows a singular object to 
+                        have multiple forms depending on the level of object it is.
+                    </p>
+                    <p class="regText"> Say we have a superclass Mammal, and subclass Bird. (Refer to the organism tree I made at the bottom of Inheritance).
+                        All (techincally most) mammals can travel in some shape or form. For simplicity purposes say a mammal can travel by foot. The subclass
+                        Bird may redefine travelling with its special wings, but it can also travel by foot. 
+                    </p>
+                    <p class="regText"> When a Bird object is asked to travel, it will default to travelling by flight, but if the Bird class allows itself 
+                        to travel using it's superclass, it can via the keyword super.
+                    </p>
+                    <p class="regText"> Lets see this in code. Here is a Mammal class:
+                    </p>
+                    <p class="codeSection">
+                        <br>
+                        &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">File Name:</span> Mammal.java <br>
+                        <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)"> class</span> Mammal <span style="color:rgb(47, 255, 241)">extends</span> <span style="color:greenyellow">Animal</span> { <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Attributes / Variables</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Functions / Methods</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">void</span> travel(){ <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">System</span>.<span style="color:rgb(163, 221, 195)">out</span>.<span style="color:rgb(47, 175, 255)">println</span>(<span style="color:rgb(251, 100, 125)">"Travelling by foot"</span>); <span style="color:rgba(255, 255, 255, 0.36)"><br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp } <br>
+                        <br>
+                    </p>
+                    <p class="regText"> Here is the Bird subclass showcasing how it may redefine the travel method.
+                    </p>
+                    <p class="codeSection">
+                        <br>
+                        &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">File Name:</span> Bird.java <br>
+                        <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)"> class</span> Bird <span style="color:rgb(47, 255, 241)">extends</span> <span style="color:greenyellow">Mammal</span> { <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Attributes / Variables</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Functions / Methods</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">void</span> travel(){ <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">System</span>.<span style="color:rgb(163, 221, 195)">out</span>.<span style="color:rgb(47, 175, 255)">println</span>(<span style="color:rgb(251, 100, 125)">"Travelling with wings"</span>); <span style="color:rgba(255, 255, 255, 0.36)"><br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp } <br>
+                        <br>
+                    </p>
+                    <p class="regText"> Now when a bird object performs the travel functions, this happens:
+                    </p>
+                    <p class="codeSection">
+                        <br>
+                        <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (IN ANOTHER FILE) </span> <br>
+                        <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">Bird</span> <span style="color:rgb(163, 221, 195)">var</span> = <span style="color:rgb(47, 255, 130)">new</span> <span style="color:rgb(47, 175, 255)">Bird</span>(); <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp <span style="color:rgb(163, 221, 195)">var</span>.travel()<br>
+                        <br><span style="color:rgba(255, 255, 255, 0.36)">
+                        &nbsp &nbsp &nbsp &nbsp (Output Console) <br>
+                        &nbsp &nbsp 1 &nbsp &nbsp Travelling with wings<br>
+                        <br>
+                        </span>
+                    </p>
+                    <p class="regText"> The technique of a subclass redefining a superclass is called OVERRIDING. 
+                    </p>
+                    <p class="regText"> Here is a Bird class that instead calls its superclass's method, then adds its unique function. 
+                        It calls the superclass method via the keyword "super"
+                    </p>
+                    <p class="codeSection">
+                        <br>
+                        &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">File Name:</span> Bird.java <br>
+                        <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)"> class</span> Bird <span style="color:rgb(47, 255, 241)">extends</span> <span style="color:greenyellow">Mammal</span> { <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Attributes / Variables</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Functions / Methods</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">void</span> travel(){ <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(255, 230, 0)">super</span>.travel(); <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">System</span>.<span style="color:rgb(163, 221, 195)">out</span>.<span style="color:rgb(47, 175, 255)">println</span>(<span style="color:rgb(251, 100, 125)">"Travelling with wings"</span>); <span style="color:rgba(255, 255, 255, 0.36)"><br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp }<br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp } <br>
+                        <br>
+                    </p>
+                    <p class="regText"> Here is a demonstration: 
+                    </p>
+                    <p class="codeSection">
+                        <br>
+                        <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (IN ANOTHER FILE) </span> <br>
+                        <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">Bird</span> <span style="color:rgb(163, 221, 195)">var</span> = <span style="color:rgb(47, 255, 130)">new</span> <span style="color:rgb(47, 175, 255)">Bird</span>(); <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp <span style="color:rgb(163, 221, 195)">var</span>.travel()<br>
+                        <br><span style="color:rgba(255, 255, 255, 0.36)">
+                        &nbsp &nbsp &nbsp &nbsp (Output Console) <br>
+                        &nbsp &nbsp 1 &nbsp &nbsp Travelling by foot<br>
+                        &nbsp &nbsp 2 &nbsp &nbsp Travelling with wings<br>
+                        </span>
+                        <br>
+                    </p>
+                    <p class="regText"> The "super" keyword essentially calls the superclass of the class it is in.
+                    </p>
+                    <p class="regText"> Some additional things you need to know are:</p>
+                    <ul style="font-size: 200%; margin-left: 15%; color:rgb(240, 255, 244)">
+                        <li> If you have <br>
+                            SuperClass var = new SubClass();
+                            <br>var may NOT use SubClass methods unless it is downcasted or is a overridden method. The overridden method only works because
+                            the method name exists within SuperClass allowing to be passed during Compile Time, then at runtime recognizes the SubClass overrider.
+                        </li>
+                        <li> A SubClass may not create a SuperClass.</li>
+                        <li> If a SuperClass calls a method within itself, the SuperClass's method is used, not the SubClass's, even if the name overridden. </li>
+                    </ul>
+            </div>
+            <br>
+            <div class="collapsible4">
+                <button class="collapsible-btn4">Open/Close <span style="color:rgb(9, 255, 0)">ABSTRACTION</span></button>
+                <div class="collapsiblecontent4">
+                    <h1 class="headerText absHeader"> &nbsp &nbsp Abstraction Example</h1>
+                    <p class="regText"> As stated previously, 
+                        Abstraction is the idea that classes may be abstract. Classes may have predetermined methods, but no definition/code within the method - making it 
+                        essentially useless. To add use to such a vaguely defined class, it has to be extended with subclasses which purposefully overrides the methods
+                        and gives it functions.
+                    </p>
+                    <p class="regText"> Here is a class called Solid:
+                    </p>
+                    <p class="codeSection">
+                        <br>
+                        &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">File Name:</span> Solid.java <br>
+                        <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">abstract</span> <span style="color:rgb(47, 255, 241)">class</span> Solid { <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Vague Attributes / Variables</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(163, 221, 195)">String</span> name; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">Solid</span>(String name) { <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(255, 230, 0)">this</span>.name = name; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp } <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Vague Functions / Methods</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(163, 221, 195)">String</span> getName() { <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">9</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">return</span> name; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">10</span> &nbsp &nbsp &nbsp } <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">11</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public abstract</span> <span style="color:rgb(163, 221, 195)">double</span> volume(); <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">12</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public abstract</span> <span style="color:rgb(163, 221, 195)">double</span> perimeter(); <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">13</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public abstract</span> <span style="color:rgb(163, 221, 195)">double</span> surfaceArea(); <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">14</span> &nbsp &nbsp } <br>
+                        <br>
+                    </p>
+                    <p class="regText"> There are many different vriable names and method names, but not definition. The "abstract" keyword ensures that this class
+                        may not be instantiated and allows for different syntax.
+                    </p>
+                    <p class="regText"> Lets add some functionality with some subclasses which give proper meaning to undefined methods by using overriding and inheritance:
+                    </p>
+                    <p class="regText"> &nbsp Class for Rectangular Prism:
+                    </p>
+                    <p class="codeSection">
+                        <br>
+                        &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">File Name:</span> RectangularPrism.java <br>
+                        <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">class</span> RectangularPrism <span style="color:rgb(47, 255, 241)">extends</span> Solid { <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// New Attributes / Variables</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(163, 221, 195)">double</span> width; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(163, 221, 195)">double</span> length; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(163, 221, 195)">double</span> height; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">RectangularPrism</span>(String name, <span style="color:rgb(163, 221, 195)">double</span> width, <span style="color:rgb(163, 221, 195)">double</span> length, <span style="color:rgb(163, 221, 195)">double</span> height) { <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(255, 230, 0)">super</span>(name); <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(255, 230, 0)">this</span>.width = width; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">9</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(255, 230, 0)">this</span>.length = length; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">10</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(255, 230, 0)">this</span>.height = height; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">11</span> &nbsp &nbsp &nbsp } <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">12</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(163, 221, 195)">double</span> volume() { <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">13</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">double</span> v = width * length* height; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">14</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">return</span> v; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">15</span> &nbsp &nbsp &nbsp } <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">16</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(163, 221, 195)">double</span> surfaceArea() { <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">17</span> &nbsp &nbsp &nbsp &nbsp <span style="color:163, 221, 195">double</span> sa = 2 * (length * width + length * height + width * height); <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">18</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">return</span> sa; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">19</span> &nbsp &nbsp &nbsp } <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">20</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(163, 221, 195)">double</span> perimeter() { <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">21</span> &nbsp &nbsp &nbsp &nbsp <span style="color:163, 221, 195">double</span> p = 4 * (length + width + height); <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">22</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">return</span> p; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">23</span> &nbsp &nbsp &nbsp } <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">24</span> &nbsp &nbsp } <br>
+                        <br>
+                    </p>
+                    <p class="regText"> &nbsp Class for Sphere:
+                    </p>
+                    <p class="codeSection">
+                        <br>
+                        &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">File Name:</span> Sphere.java <br>
+                        <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">class</span> Sphere <span style="color:rgb(47, 255, 241)">extends</span> Solid { <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// New Attributes / Variables</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(163, 221, 195)">double</span> radius; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(163, 221, 195)">double</span> pi; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)">Sphere</span>(String name, <span style="color:rgb(163, 221, 195)">double</span> radius) { <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(255, 230, 0)">super</span>(name); <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp &nbsp &nbsp pi = <span style="color:rgb(163, 221, 195)">Math</span>.PI; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(255, 230, 0)">this</span>.radius = radius; <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">9</span> &nbsp &nbsp &nbsp } <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">10</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Functions / Methods</span> <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">11</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(163, 221, 195)">double</span> volume() { <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">12</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">double</span> v = pi * <span style="color:rgb(163, 221, 195)">Math</span>.pow(radius, 3)*(4.0 / 3.0); <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">13</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">return</span> v; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">14</span> &nbsp &nbsp &nbsp } <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">15</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(163, 221, 195)">double</span> surfaceArea() { <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">16</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">double</span> sa = pi * radius * radius * 4; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">17</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">return</span> sa; <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">18</span> &nbsp &nbsp &nbsp } <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">19</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(163, 221, 195)">double</span> perimeter() { <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">20</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">return</span> <span style="color:rgb(163, 221, 195)">null</span>; <span style="color:rgba(255, 255, 255, 0.36)">// Perimeter is technically not a real number</span> <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">21</span> &nbsp &nbsp &nbsp } <br>
+                        &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">22</span> &nbsp &nbsp } <br>
+                        <br>
+                    </p>
+                    <p class="regText"> As you can see, now the useless method of Solid, something abstract that can't do anything, is now useful and represent real objects.
+                        (Truly an Object Oriented coding style)
+                    </p>
+                    
+                    
+            </div>
+            <div class="backToTopDiv">
+                <image class="arrow" src="Pictures/ArrowGif.gif"></image>
+                <br>
+                <button class="backToTop" onclick='window.scrollTo({top: 0, behavior: "smooth"});'>
+                    Go Back Up
+                </button>
+            </div>
+            </div>
+            
+        </div>
+
+    </div>
+</body>
+</html>

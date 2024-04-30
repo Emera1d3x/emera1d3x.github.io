@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sehan Munir Portfolio - Searching/Sorting</title>
+    <link rel="stylesheet" href="CSS STUFF/general.css">
+    <link rel="stylesheet" href="CSS STUFF/page.css">
+</head>
+<body class="parent">
+    <div class="headSection">
+        <h1 class="title"><span style="color: rgb(0, 142, 83);">{ICS40}</span>//Searching&Sorting</h1>
+    </div>
+    <div class="content">
+        <br>
+        <a href="pageICS4AP.html" target="_self">
+            <button class="backButton">&lt;&lt; Back</button>
+        </a>
+        <div>
+            <h1 class="ooptext"> <br><br>
+                <span style="color:rgb(255, 161, 47)">Sorting</span> is a techinique in which
+                comparable things get put in order
+                for <span style="color:rgb(250, 194, 125)">reliability</span>,
+                <span style="color:rgb(250, 194, 125)">organization</span> and <span style="color:rgb(255, 161, 47)">searching</span>. 
+                In <span style="color:rgb(255, 0, 0)">Computer Science</span>, a topic in which we allow
+                computers to do things for us, <span style="color:rgb(255, 161, 47)">sorting</span> various
+                things just as a large data set of numbers
+                or people's name are very important and can 
+                be done in many ways.
+                The series of objects generally come in the 
+                form of an array, and the <span style="color:rgb(255, 161, 47)">algorithms</span> which
+                sort an array use different techiniques, all with
+                their own 🟢pros🟢 and 🔴cons🔴.
+            </h1>
+            <p class="regText">
+                First we must learn the concept of time complexity.
+                The time complexity of code refers to the 
+                amount of time it takes for a program to run - called O, 
+                relative to the size of its input - 
+                called N. It's typically 
+                expressed in terms of Big O notation, which provides
+                an upper bound on the growth rate of a function as
+                the input size approaches infinity. Lets say we 
+                have an array:
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Array Retrieval Complexity) </span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span>[] numbers = {6,89,9542,134,432}; <span style="color:rgba(255, 255, 255, 0.36)">// An Array</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp numbers[3]; <span style="color:rgba(255, 255, 255, 0.36)">// Accesing an element at index </span><br>
+                <br>
+            </p>
+            <p class="regText">
+                Accessing an element at a specific index of an array takes O(1), meaning it only takes as long 
+                as your system can retrieve a value from the location in memory.
+            </p>
+            <p class="regText">
+                Now lets retrieve the sum of all numbers within the array:
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Iterating Array Complexity)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> sum = 0;<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp <span style="color:aqua">for (int num: number)</span>{ <span style="color:rgba(255, 255, 255, 0.36)">// Looping over all elements</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp &nbsp sum+=num;<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp } <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp <span style="color:rgb(163, 221, 195)">System</span>.<span style="color:rgb(163, 221, 195)">out</span>.<span style="color:rgb(47, 175, 255)">println</span>(<span style="color:rgb(251, 100, 125)">sum</span>); <span style="color:rgba(255, 255, 255, 0.36)"><br>
+                <br>
+            </p>
+            <p class="regText">
+                Because we are looping over the entire array to get information, the 
+                algorithm is running at O(1xSizeOfArray), or O(N).
+            </p>
+            <p class="regText">
+                <span style="color:rgb(255, 87, 205)">Quick Vocabulary Lesson</span>: When looping over an array, we use the term <span style="color:rgb(200, 0, 255)">pass</span>.
+            </p>
+            <p class="regText">
+                Now say we pass over an array, and during that pass for every elements accessed, we pass over again.
+                (Essentially a nested for loop):
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Nested For Loop Complexity)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> sum = 0;<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp <span style="color:aqua">for (int num: number)</span>{ <span style="color:rgba(255, 255, 255, 0.36)">// Looping over all elements</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp &nbsp <span style="color:aqua">for (int num: number)</span>{ <span style="color:rgba(255, 255, 255, 0.36)">// Looping over all again</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp sum+=num;<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp &nbsp } <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp } <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp <span style="color:rgb(163, 221, 195)">System</span>.<span style="color:rgb(163, 221, 195)">out</span>.<span style="color:rgb(47, 175, 255)">println</span>(<span style="color:rgb(251, 100, 125)">sum</span>); <span style="color:rgba(255, 255, 255, 0.36)"><br>
+                <br>
+            </p>
+            <p class="regText">
+                This time we are running at O(N x N) or O(N^2).
+            </p>
+            <p class="regText">
+                Say we need to perform some function over an array of number, at low sizes, 
+                the effeciency of an algorithm isn't really relevant, but the larger the value gets,
+                the more noticable the difference gets.
+            </p>
+            <div style="display:grid; justify-content: center ;">
+                <image src="Pictures/TimeComplexityGraph.png"></image>
+            </div>
+            <p class="regText">
+                Note that this is only when the size of the array is only 10. From this,
+                we can understand that the effeciency of an algorithm is very 
+                important in practical uses.
+            </p>
+            <h1 class="ooptext"><br><br>
+                Sorting Algorithms
+            </h1>
+            <p class="regText">
+                Some sorting methods are:
+            </p>
+            <ul style="font-size: 200%; margin-left: 15%; color:rgb(240, 255, 244)">
+                <li> Bubble Sort </li>
+                <li> Merge Sort </li>
+                <li> Insertion Sort </li>
+                <li> Selection Sort </li>
+            </ul>
+            <h1 class="ooptext"> <br><br>
+                Bubble Sort
+            </h1>
+            <p class="regText">
+                Bubble sort is a simple sorting algorithm that repeatedly
+                passes through an array, compares adjacent elements, and 
+                swaps them if they are in the wrong order. The pass through
+                the list is repeated until the array is sorted.​ Because I did my
+                sorting assignment on this, I have explained this in depth the most.
+            </p>
+            <p class="regText">
+                Here is the Pseudocode: (All code below is from Sorting Presentation Assignment, proper citations can be found in the citations tab)
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Iterating Array Complexity)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1 &nbsp &nbsp // given an array<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2 &nbsp &nbsp // unsorted is assumed to be true​<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3 &nbsp &nbsp // while array is unsorted​<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4 &nbsp &nbsp // &nbsp &nbsp unsorted is assumed to be false (this will change if proven otherwise)​​<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5 &nbsp &nbsp // &nbsp &nbsp go through every single adjacent element pair ​</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6 &nbsp &nbsp // &nbsp &nbsp &nbsp &nbsp if within the pair the element on the left deserves to go on the right​​<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7 &nbsp &nbsp // &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp swap elements​<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8 &nbsp &nbsp // &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp unsorted is true (as safely assumed by the fact that a swap was needed)​<br>
+                <br>
+            </p>
+            <p class="regText">
+                Here is the Java implementation: 
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Bubble Sort)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">public static void</span> bubbleSort(<span style="color:rgb(47, 175, 255)">int</span>[] array){ <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">boolean</span> sorted = <span style="color:rgba(255, 170, 239)">false;</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">while</span> (!sorted){ <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">sorted</span> = <span style="color:rgba(255, 170, 239)">true;</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">for</span> (<span style="color:rgb(47, 175, 255)">int</span> i = 1; i &lt; array.length; i++){ <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">if</span> (array[i-1]&gt;array[i]){ <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> temp = array[i]; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp array[i] = array[i-1]; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">9</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp array[i-1] = temp; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">10</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp sorted = <span style="color:rgb(255, 170, 239)">false;</span> <span style="color:rgba(255, 255, 255, 0.36)">// indicates that a swap occurred, so the array is not sorted yet</span><br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">11</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp } <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">12</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp } <span style="color:rgba(255, 255, 255, 0.36)">// end of the for loop</span><br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">13</span> &nbsp &nbsp &nbsp &nbsp } <span style="color:rgba(255, 255, 255, 0.36)">// end of the while loop</span><br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">14</span> &nbsp &nbsp } <span style="color:rgba(255, 255, 255, 0.36)">// end of the bubbleSort method</span><br>
+                <br>
+            </p>
+            <p class="regText">
+                Here is a visualization I made with Manim (a python library that compiles scences) (In the navbar, you can found my code and full explanation in Programming+, and citations of the tool in Citations)
+            </p>
+            <div style="display:grid; justify-content: center ;">
+                <video controls autoplay loop src="Videos/BubbleSortVisualization.mp4" height="900px" title="Bubble Sort"></video>
+            </div>   
+            <p class="regText">
+                The time complexity of bubble sort at worst is O(N^2), not terrible, not great. Here is the proof:
+            </p>
+            <div style="background-color: rgba(0,0,0,0.25);">
+                <image class="uml" src="Pictures/BubbleSortTimeComplexity.png"></image>
+            </div>
+            <p class="regText">
+                Some pros are:
+            </p>
+            <ul style="font-size: 200%; margin-left: 15%; color:rgb(240, 255, 244)">
+                <li> Bubble Sort requires no additional memory </li>
+                <li> Bubble Sort is made up of only a few lines of code </li>
+                <li> Code is intuitive and easy to implement​ </li>
+                <li> With a best-case running time complexity of O(n),  Bubble Sort is also helpful in determining whether or not a list is sorted at max speed. Other sorting methods frequently cycle through their entire sorting sequence, taking O(n2) or O(n log n) time to complete​</li>
+                <li> If only a few elements are misplaced by a small margin, sorting is decently quick </li>
+            </ul>
+            <p class="regText">
+                Some cons are:
+            </p>
+            <ul style="font-size: 200%; margin-left: 15%; color:rgb(240, 255, 244)">
+                <li> The main disadvantage is the amount of time it takes. It is highly inefficient for large data sets, with a running time of O(n^2). </li>
+                <li> There are better methods in terms of time complexity (such as Merge Sort (O(n*Log n))) </li>
+            </ul>   
+            <h1 class="ooptext"><br><br>
+                Merge Sort
+            </h1>
+            <p class="regText">
+                Merge Sort is a divide and conquer sorting method. It begins by taking the problem of sorting many elements
+                and recursively divides so it can handle the easier task of sorting many mini-subarrays, and then 
+                merges the arrays back together thus solving the entire task. 
+            </p>
+            <p class="regText">
+                First, divide the array into subarrays recursively:
+            </p>    
+            <div style="display:grid; justify-content: center ;">
+                <image class="imagerainbowthing" src="Pictures/MergeSortDivide.png"></image>
+            </div> 
+            <p class="regText">
+                On your way to merge back, sort:
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Merge Sort)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">public static void</span> mergeSort(<span style="color:rgb(47, 175, 255)">int</span>[] array, <span style="color:rgb(47, 175, 255)">int</span> startIndex, <span style="color:rgb(47, 175, 255)">int</span> endIndex) { <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">if</span> (startIndex &lt; endIndex) { <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> middleIndex = (startIndex + endIndex) / 2; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp mergeSort(array, startIndex, middleIndex); <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp mergeSort(array, middleIndex + 1, endIndex); <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp merge(array, startIndex, middleIndex, endIndex); <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp } <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8</span> <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">9</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">public static void</span> merge(<span style="color:rgb(47, 175, 255)">int</span>[] array, <span style="color:rgb(47, 175, 255)">int</span> startIndex, <span style="color:rgb(47, 175, 255)">int</span> middleIndex, <span style="color:rgb(47, 175, 255)">int</span> endIndex) { <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">10</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span>[] temp = <span style="color:rgb(244, 107, 239)">new</span> <span style="color:rgb(47, 175, 255)">int</span>[endIndex - startIndex + 1]; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">11</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> i = startIndex, j = middleIndex + 1, k = 0; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">12</span> <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">13</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">while</span> (i &lt;= middleIndex &amp;&amp; j &lt;= endIndex) { <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">14</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">if</span> (array[i] &lt;= array[j]) { <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">15</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp temp[k] = array[i]; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">16</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp i++; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">17</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp } <span style="color:rgb(163, 221, 195)">else</span> { <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">18</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp temp[k] = array[j]; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">19</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp j++; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">20</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp } <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">21</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp k++;} <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">22</span> <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">23</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">while</span> (i &lt;= middleIndex) { <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">24</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp temp[k] = array[i]; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">25</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp i++; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">26</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp k++;} <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">27</span> <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">28</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">while</span> (j &lt;= endIndex) { <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">29</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp temp[k] = array[j]; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">30</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp j++; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">31</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp k++;} <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">32</span> <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">33</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">for</span> (i = startIndex; i &lt;= endIndex; i++)<br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">34</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp array[i] = temp[i - startIndex]; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">35</span> &nbsp &nbsp }<br>
+                <br>
+            </p>
+            <p class="regText">
+                Some pros of Merge Sort are:
+            </p>
+            <ul style="font-size: 200%; margin-left: 15%; color:rgb(240, 255, 244)">
+                <li> Merge Sort has a time complexity of O(n log n), making it efficient for large data sets </li>
+                <li> Merge Sort is suitable for sorting linked lists as well as arrays </li>
+            </ul>
+            <p class="regText">
+                Some cons of Merge Sort are:
+            </p>
+            <ul style="font-size: 200%; margin-left: 15%; color:rgb(240, 255, 244)">
+                <li> Merge Sort requires additional memory space proportional to the size of the input array </li>
+            </ul>
+            <h1 class="ooptext"> <br><br>
+                Insertion Sort
+            </h1>
+            <p class="regText">
+                Insertion Sort works by splitting an array into two parts. The left side of the array is the sorted portion, and the right side is the 
+                unsorted portion. Using a pointer (looking at an index) (also known as a key), a for loop passes through the array, at each index it
+                moves an element from the unsorted portion, and chooses a spot to place the element in the sorted portion.
+            </p>  
+            <p class="regText">
+                Here is the implementation:
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Insertion Sort)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">public static void</span> insertionSort(<span style="color:rgb(47, 175, 255)">int</span>[] array) { <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> n = array.length; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">for</span> (<span style="color:rgb(47, 175, 255)">int</span> i = 1; i &lt; n; i++) { <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> key = array[i]; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> j = i - 1; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">while</span> (j &gt;= 0 &amp;&amp; array[j] &gt; key) { <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp array[j + 1] = array[j]; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">9</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp j--; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">10</span> &nbsp &nbsp &nbsp &nbsp } <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">11</span> &nbsp &nbsp &nbsp &nbsp array[j + 1] = key; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">12</span> &nbsp &nbsp } <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">13</span> <br>
+            </p>
+            <p class="regText">
+                Some pros of Insertion Sort are:
+            </p>
+            <ul style="font-size: 200%; margin-left: 15%; color:rgb(240, 255, 244)">
+                <li> It is an in-place sorting algorithm, meaning it requires only a constant amount of additional memory space </li>
+                <li> The implementation of Insertion Sort is simple and easy to understand</li>
+                <li> It performs well on data sets that are already partially sorted or have only a few elements out of place </li>
+            </ul>
+            <p class="regText">
+                Some cons of Insertion Sort are:
+            </p>
+            <ul style="font-size: 200%; margin-left: 15%; color:rgb(240, 255, 244)">
+                <li> Insertion Sort has a worst-case time complexity of O(n^2), making it inefficient for large data sets </li>
+                <li> It is not suitable for sorting large arrays or data sets with random or reverse-sorted elements </li>
+                <li> Insertion Sort may require a significant number of comparisons and swaps </li>
+                <li> When placing a new element into the sorted array, the rest of the elements need to "move out the way" so its inefficient</li>
+            </ul>
+            <h1 class="ooptext"> <br><br>
+                Selection Sort
+            </h1>
+            <p class="regText">
+                Selection Sort is a very simple and intuitive algorithm, but inefficient.
+                An outer loop goes through the entire array. The index of the outer
+                loop will represent the index that will be "solved" after another minimum pass.
+                Within the outer loop is a inner loop which goes through the unsorted
+                section of the array, selects the minimum within that portion, 
+                and places it at the index of the outer loop so it is solved / in 
+                correct place.
+            </p>  
+            <p class="regText">
+                Here is what it looks like in code:
+            </p>  
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Selection Sort Algorithm)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">public static void</span> selectionSort(<span style="color:rgb(47, 175, 255)">int</span>[] array) { <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> n = array.length; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp &nbsp <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">for</span> (<span style="color:rgb(47, 175, 255)">int</span> i = 0; i &lt; n - 1; i++) { <span style="color:rgba(255, 255, 255, 0.36)">// Outer loop, pass that solves each index one by one</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> minimumIndex = i; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">for</span> (<span style="color:rgb(47, 175, 255)">int</span> j = i + 1; j &lt; n; j++) { <span style="color:rgba(255, 255, 255, 0.36)">// Inner loop, that finds minimum in portion to the right of the solved array</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">if</span> (array[j] &lt; array[minimumIndex]) <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp minimumIndex = j; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">9</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp } <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">10</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Swap minimum index with the found minimum in the unsorted portion</span><br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">11</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> temp = array[minimumIndex]; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">12</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp array[minimumIndex] = array[i]; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">13</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp array[i] = temp; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">14</span> &nbsp &nbsp  &nbsp &nbsp } <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">15</span> &nbsp &nbsp } <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)"></span> <br>
+            </p>
+            
+            <h1 class="ooptext"><br><br>
+                Searching
+            </h1>
+            <p class="regText">
+                When you have a unsorted array, your best bet of finding a specific element in it
+                is just passing over the array to find it.
+            </p>    
+            <p class="regText">
+                This is a way you can do it:
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Search Unsorted Array)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> target = 4;<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> index = 0;<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">for</span> (<span style="color:rgb(47, 175, 255)">int</span> i = 0; i &lt; array.length; i++){<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">if</span> (target == array[i]){<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp index = i;<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">break</span>;<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp &nbsp &nbsp }<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8</span> &nbsp &nbsp }<br> <br>
+            </p>
+            <p class="regText">
+                Worst case senario, this pass uses the time complexity of O(N), the best possible for an unsorted array.
+            </p>    
+            <p class="regText">
+                However, when you have a sorted array, you can perform something called binary search.
+                The search first starts at the middle index,
+                <br> - &nbsp &nbsp &nbsp &nbsp If your target is greater than middle, the search will continue in the right section
+                <br> - &nbsp &nbsp &nbsp &nbsp If your target is less than middle, the search will continue in the left section 
+                <br> - &nbsp &nbsp &nbsp &nbsp If your target is in the middle, you have found your target
+                <br> By figuring out which of the two sections your target has to be in, it effectively cuts your searching space in half.
+                If you do this repeatedly, you are performing an algorithm at the effeciency of O(log{N}) which is better than O(N).
+                <br> Here is the implementation of the idea in code:
+            </p> 
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Binary Search Algorithm)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">public static int</span> binarySearch(<span style="color:rgb(47, 175, 255)">int</span>[] array, <span style="color:rgb(47, 175, 255)">int</span> target) { <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> left = 0; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> right = array.length - 1; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">while</span> (left <= right) { <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> middle = (left + right) / 2; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">if</span> (array[middle] == target) { <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">return</span> middle; <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp } <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">9</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">if</span> (array[middle] &lt; target) { <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">10</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp left = middle + 1; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">11</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp } <span style="color:rgba(163, 221, 195)">else</span> { <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">12</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp right = middle - 1; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">13</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp } <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">14</span> &nbsp &nbsp &nbsp &nbsp } <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">15</span> &nbsp &nbsp &nbsp &nbsp <span style="color:rgb(163, 221, 195)">return</span> -1; <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">16</span> &nbsp &nbsp }<br><br>
+            </p>
+               
+                                                                
+        </div>
+            <div class="backToTopDiv">
+                <image class="arrow" src="Pictures/ArrowGif.gif"></image>
+                <br>
+                <button class="backToTop" onclick='window.scrollTo({top: 0, behavior: "smooth"});'>
+                    Go Back Up
+                </button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

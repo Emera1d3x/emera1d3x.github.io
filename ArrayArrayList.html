@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sehan Munir Portfolio - Arrays/ArrayLists</title>
+    <link rel="stylesheet" href="CSS STUFF/general.css">
+    <link rel="stylesheet" href="CSS STUFF/page.css">
+</head>
+<body class="parent">
+    <div class="headSection">
+        <h1 class="title"><span style="color: rgb(0, 142, 83);">{ICS40}</span>//Arrays&ArrayLists</h1>
+    </div>
+    <div class="content">
+        <br>
+        <a href="pageICS4AP.html" target="_self">
+            <button class="backButton">&lt;&lt; Back</button>
+        </a>
+        <div>
+            <h1 class="ooptext">In Java☕, there are several different 
+            built-in <span style="color:aqua">Data Structures</span> which help us create effective code. In this course we primarily learned 
+            about the Array and ArrayList.<br><br>
+            What is an Array? <br>
+            An Array is a Data Structure that stores a collection of 
+            elements of the same data type. These elements are
+            stored in specific memory locations in a way such that it may
+            be accessed by their index. Arrays have a fixed size unlike ArrayLists.
+            </h1>
+            <p class="regText">
+                Here is an image that shows a visualization of an Array:
+            </p>
+            <div style="display:grid; justify-content: center ;">
+                <image class="imagerainbowthing" style="transform:scale(1.2);" src="Pictures/ArrayImage.png"></image>
+            </div>
+            <p class="regText">
+                To create an integer array, do this:
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Creating A New Integer Arary) </span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span>[] numberArray;<br>
+                <br>
+            </p>
+            <p class="regText">
+                You can create an array of any type! Here are more examples:
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Creating A New Arary) </span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">double</span>[] decimalArray;<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">String</span>[] courseNames;<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">Animals</span>[] inhabitants; <span style="color:rgba(255, 255, 255, 0.36)">// Any object works! Just do Object[] <== with square brackets</span><br>
+                <br>
+            </p>
+            <p class="regText">
+                Now in reality, these arrays are completely useless ;-;. In order to hold true value and use this Data Structure, you must first instantiate it.
+            </p>
+            <p class="regText">
+                One way you can do it is pass the values 
+                within curly braces directly.
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Instantiating A New Arary) </span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span>[] numberArray = {7, 4, 543, 3, 2, 6, 78, 9, 10};<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">String</span>[] courseNames = {ICS4U, TEJ3MP, SNC2DP, MTH2DP};<br>
+                <br>
+            </p>
+            <p class="regText">
+                Another way you may do it is shown below. This 
+                method is far better as it allows one to a create big 
+                array with default values without taking up too
+                much text space. Then later, they may use a loop
+                or syntax-light way of filling the information. Within the 
+                square brackets goes the size of the array (natural number).
+                 After this, you
+                may not "dynamically" change the size like you 
+                can with an ArrayList.
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Instantiating A New Arary) </span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span>[] numberArray = new int[9];<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">String</span>[] courseNames = new String[4];<br>
+                <br>
+            </p>
+            <p class="regText">
+                To access a specific value, you do arrayName[indexposition].
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Accessing and Modifying) </span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span>[] numberArray = new int[9];<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp <span style="color:rgb(163, 221, 195)">System</span>.<span style="color:rgb(163, 221, 195)">out</span>.<span style="color:rgb(47, 175, 255)">println</span>(<span style="color:rgb(251, 100, 125)">"numberArray[0]"</span>);<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Output is: 0    <== this is because an integer array that is not filled with values will keep "0" at every index</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// To Modify A Specific Position, do this:</span> <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp numberArray[4] = 37;<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp <span style="color:rgb(163, 221, 195)">System</span>.<span style="color:rgb(163, 221, 195)">out</span>.<span style="color:rgb(47, 175, 255)">println</span>(<span style="color:rgb(251, 100, 125)">"Arrays.toString(numberArray)"</span>); <span style="color:rgba(255, 255, 255, 0.36)"><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Output is: {0, 0, 0, 0, 37, 0, 0, 0, 0}</span><br>
+                <br>
+            </p>
+            <p class="regText">
+                Here is how the index numbering system works:
+            </p>
+            <div style="display:grid; justify-content: center ;">
+                <image class="imagerainbowthing" style="transform:scale(1.2);" src="Pictures/ArrayIndex.png"></image>
+            </div>
+            <p class="regText">
+                Positions are ordered from 0 to the Size Of Array - 1
+            </p>
+            <p class="regText">
+                Some useful methods you may want to know are: 
+                <br> &nbsp &nbsp &nbsp &nbsp  - Arrays.sort(array);&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<<== Sorts a number array from least to greatest, string array lexicographically
+                <br> &nbsp &nbsp &nbsp &nbsp  - Arrays.fill(array, thing);&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<<== Fills array with thing
+                <br> &nbsp &nbsp &nbsp &nbsp  - Arrays.toString(array);&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<<== Prints array in {element, element...} format, else it prints the hashcode memory location
+            </p>
+            <p class="regText">
+                Say you want to go through a number array and get the total. You can do this with a <span style="color:rgb(255, 86, 128)">foreach</span> loop (you can also do it with a <span style="color:rgb(255, 86, 128)">for</span> loop): 
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Iterating Array)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span> total = 0;<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp <span style="color:aqua">for (int num: number)</span>{<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp &nbsp total+=num;<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp } <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp <span style="color:rgb(163, 221, 195)">System</span>.<span style="color:rgb(163, 221, 195)">out</span>.<span style="color:rgb(47, 175, 255)">println</span>(<span style="color:rgb(251, 100, 125)">"total"</span>); <span style="color:rgba(255, 255, 255, 0.36)"><br>
+                <br>
+            </p>
+            <br>
+            <br>
+            <br>
+            <p class="ooptext">=============================================================================</p>
+            <br>
+            <h1 class="ooptext"><span style="color: rgb(159, 242, 159);"> Now lets learn about <span style="color:aqua">ArrayLists</span>. ArrayLists
+                are very similar to Arrays but have some more functionalities which allow it to be more flexibile. In order to use 
+                it you must <span style="color:rgb(255, 0, 140)">import</span> java.util.ArrayList
+            </h1>
+            <p class="regText">
+                Here is how to create a new Integer ArrayList
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Creating ArrayList)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">ArrayList</span><<span style="color:rgb(255, 86, 128)">Integer</span>> var = <span style="color:pink">new</span> ArrayList<>(); <span style="color:rgba(255, 255, 255, 0.36)">// Create New Array<br>
+                <br>
+            </p>
+            <p class="regText">
+                Here are various different methods for an ArrayList along with what they do: 
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Creating ArrayList)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">var</span>.add(num); <span style="color:rgba(255, 255, 255, 0.36)"> // Adds num to ArrayList positioned at index end<br></span>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">var</span>.add(index, num); <span style="color:rgba(255, 255, 255, 0.36)"> // Adds num to ArrayList positioned at index<br></span>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">var</span>.clear(); <span style="color:rgba(255, 255, 255, 0.36)"> // Clears ArrayList<br></span>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">var</span>.remove(object); <span style="color:rgba(255, 255, 255, 0.36)"> // Removes first occurence of object<br></span>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">var</span>.remove(index); <span style="color:rgba(255, 255, 255, 0.36)"> // Removes element at index<br></span>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">var</span>.size(); <span style="color:rgba(255, 255, 255, 0.36)"> // Returns size of ArrayList<br></span>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">var</span>.get(index); <span style="color:rgba(255, 255, 255, 0.36)"> // Returns object at index<br></span>
+                <br>
+            </p>
+            <p class="regText">
+                Here is a snippet of code I did for a Bridge Card Game Simulation << citations and specific google classroom links are found in the citations tab>>.
+                These are parts where I created the deck, shuffled it, and assigned it to player hands:
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Bridge Creating Deck and Giving Out Cards)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(255, 120, 208)">static</span> <span style="color:rgb(47, 255, 203)">ArrayList</span>&lt;String&gt; deck = <span style="color:rgba(255, 120, 208)">new</span> <span style="color:rgb(47, 255, 203)">ArrayList</span>&lt;&gt;(52); <span style="color:rgba(255, 255, 255, 0.36)">// The Deck </span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp <span style="color:rgba(255, 120, 208)">static</span> <span style="color:rgb(47, 175, 255)">String</span>[] possibleDenomination = {"K","Q","J","T","9","8","7","6","5","4","3","2", "A"}; <span style="color:rgba(255, 255, 255, 0.36)">// Just for simplicity</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp <span style="color:rgba(255, 120, 208)">static</span> <span style="color:rgb(47, 175, 255)">String</span>[] possibleSuit  = {"S","H","D","C"}; <span style="color:rgba(255, 255, 255, 0.36)">// Just for simplicity</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp <span style="color:greenyellow">for</span> (<span style="color:rgb(47, 175, 255)">String</span> denomination : possibleDenomination)<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp &nbsp <span style="color:greenyellow">for</span> (<span style="color:rgb(47, 175, 255)">String</span> suit: possibleSuit)<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp deck.add(denomination + suit); <span style="color:rgba(255, 255, 255, 0.36)">// Nested for loop iterating through every possible card combination and adding it to the deck</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp <span style="color:rgb(255, 255, 255)">Collections.shuffle(deck);</span> <span style="color:rgba(255, 255, 255, 0.36)">// Collections.shuffle(); is a command that randomly changes position of objects</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8</span> &nbsp &nbsp <span style="color:rgb(255, 120, 208)">static</span> <span style="color:rgb(47, 255, 203)">ArrayList</span>&lt;<span style="color:rgb(47, 175, 255)">String</span>&gt; playerOne = <span style="color:rgba(255, 120, 208)">new</span> <span style="color:rgb(47, 255, 203)">ArrayList</span>&lt;&gt;(13); <span style="color:rgba(255, 255, 255, 0.36)">// Player One Hand</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">9</span> &nbsp &nbsp <span style="color:rgba(255, 120, 208)">static</span> <span style="color:rgb(47, 255, 203)">ArrayList</span>&lt;<span style="color:rgb(47, 175, 255)">String</span>&gt; playerTwo = <span style="color:rgba(255, 120, 208)">new</span> <span style="color:rgb(47, 255, 203)">ArrayList</span>&lt;&gt;(13); <span style="color:rgba(255, 255, 255, 0.36)">// Player Two Hand</span><br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">10</span> &nbsp &nbsp <span style="color:rgba(255, 120, 208)">static</span> <span style="color:rgb(47, 255, 203)">ArrayList</span>&lt;<span style="color:rgb(47, 175, 255)">String</span>&gt; playerThree = <span style="color:rgba(255, 120, 208)">new</span> <span style="color:rgb(47, 255, 203)">ArrayList</span>&lt;&gt;(13); <span style="color:rgba(255, 255, 255, 0.36)">// Player Three Hand</span><br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">11</span> &nbsp &nbsp <span style="color:rgba(255, 120, 208)">static</span> <span style="color:rgb(47, 255, 203)">ArrayList</span>&lt;<span style="color:rgb(47, 175, 255)">String</span>&gt; playerFour = <span style="color:rgba(255, 120, 208)">new</span> <span style="color:rgb(47, 255, 203)">ArrayList</span>&lt;&gt;(13); <span style="color:rgba(255, 255, 255, 0.36)">// Player Four Hand</span><br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">12</span> &nbsp &nbsp <span style="color:greenyellow">for</span> (int i = 0; i &lt; 13; i++){ <span style="color:rgba(255, 255, 255, 0.36)">// For loop going over 13 times and assigning players the "top" card</span><br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">13</span> &nbsp &nbsp &nbsp &nbsp playerOne.add(deck.remove(0)); <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">14</span> &nbsp &nbsp &nbsp &nbsp playerTwo.add(deck.remove(0)); <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">15</span> &nbsp &nbsp &nbsp &nbsp playerThree.add(deck.remove(0)); <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">16</span> &nbsp &nbsp &nbsp &nbsp playerFour.add(deck.remove(0)); <br>
+                &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">17</span> &nbsp &nbsp } <br><br>
+            </p>
+            <br>
+            <p class="ooptext">=============================================================================</p>
+            <br>
+            <h1 class="ooptext"><span style="color: rgb(159, 242, 159);"> <span style="color:rgb(244, 255, 127)">2-D Arrays</span> are essentially <span style="color:rgb(244, 255, 127)">Arrays</span> of <span style="color:rgb(244, 255, 127)">Arrays</span>
+            </h1>
+            <p class="regText">
+                If we implement 2-D arrays with regular Arrays, Java is actually built decently well for it. Here is code to a 2D Array:
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Creating 2D Array)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span>[][] twoDimensionalArray = {{1,2},{1,3},{1,4}};<br>
+                <br>
+            </p>
+            <p class="regText">
+                In order to access a value, you do: ArrayName[FirstDimensionIndex][SecondDimensionIndex];
+            </p>
+            <p class="regText">
+                You can even create a 3-dimensional array and arrays with even more dimensions! (Java is not restricted by our understanding of the universe)
+            </p>
+            <p class="codeSection">
+                <br>
+                <span style="color:rgba(255, 255, 255, 0.36)">&nbsp &nbsp &nbsp &nbsp (Creating Multi-D0imensional Arrays)</span> <br>
+                <br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">1</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span>[][] threeDimensionalArray = new int[5][5];<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">int</span>[][][][][][][][][][] tenDimensionalArray = new int[5][5][5][5][5][5][5][5][5][5];<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// A ten dimensional array with 5 indexes for each dimension contains 5^10 positions or 9765625 positions</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// A hundred dimensional array with 5 indexes for each dimension contains 5^100 positions or 7.8886091e+69</span><br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// (That is more than the amount of particles in the observable universe), this will break java</span><br>
+                <br>
+            </p>
+        </div>
+            <div class="backToTopDiv">
+                <image class="arrow" src="Pictures/ArrowGif.gif"></image>
+                <br>
+                <button class="backToTop" onclick='window.scrollTo({top: 0, behavior: "smooth"});'>
+                    Go Back Up
+                </button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
