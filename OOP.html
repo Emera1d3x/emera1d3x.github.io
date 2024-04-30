@@ -83,7 +83,7 @@
         <div class="info">
             <h1 class="headerText"> &nbsp &nbsp So, how are these concepts represented in Java?</h1>
             <p class="regText">&nbsp &nbsp In Java, an object is an instance of a
-                class. A class is essentially a self contained chunk of code, usually exists one per file, which 
+                class. A class is essentially a self contained chunk of code, usually existing one per file, which 
                 is a template/blueprint to what the general type of object
                 should be. Let us use an example. Say we want to have an object of a Blue-Jay.
                 To create this specific bird, we must first have a class or
@@ -124,7 +124,7 @@
             <p class="regText">Here is the format for a basic class in UML:</p>
             <image src="Pictures/UMLDefault.png" class="uml"></image>
             <p class="regText">In UML, "+" may replace public, "-" may replace private, and "#" may replace protected</p>
-            <p class="regText">Now lets add our information about the Bird Class, containing information
+            <p class="regText">Now let us add our information about the Bird Class, containing information
                 about a barebones bird:
             </p>
             <image src="Pictures/UMLBird.png" class="uml"></image>
@@ -182,14 +182,14 @@
                 &nbsp &nbsp 2 &nbsp &nbsp // To be like a blue-jay! <br>
                 &nbsp &nbsp 3 &nbsp &nbsp // (Class name = new Class's Constructor and Parameters())</span> <br>
                 &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp <span style="color:rgb(47, 175, 255)">Bird</span> <span style="color:rgb(163, 221, 195)">blueJay</span> = <span style="color:rgb(47, 255, 130)">new</span> <span style="color:rgb(47, 175, 255)">Bird</span>(14.5, 65.0, "Blue", 34.0, "Cyanocitta cristata:80 chrm:fjlak32wes", "worm"); <br>
-                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5 &nbsp &nbsp // The "new" keywored is used to create a new instance of a class<br>
+                &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5 &nbsp &nbsp // The "new" keyword is used to create a new instance of a class<br>
                 &nbsp &nbsp 6 &nbsp &nbsp // As shown, parameters for constructor are filled</span><br>
                 <br>
             </p>
             <p class="regText"> And there we have a new bird object with the properties that a 
                 blue-jay may have! But what if we want to implement
                 the new object's functions? We can do this by using 
-                dot notation upon an object.
+                dot notation upon the object.
             </p>
             <p class="codeSection">
                 <br>
@@ -211,9 +211,9 @@
             </p>
             <p class="regText">These are the basics to how Java operates.
                 In reality, the entirety of Java is just a bunch of 
-                classes that have a defined structure/bluprint. We use these 
+                classes that have a defined structure/blueprint. We use these 
                 blueprints and instantiate objects with information to perform
-                basically anything possible!
+                everything possible!
             </p>
             <p class="regText">And now you know the very basics of Classes and Object Oriented Programming!</p>
             <br>
@@ -224,12 +224,15 @@
                     <h1 class="headerText encapsHeader"> &nbsp &nbsp Encapsulation Example</h1>
                     <p class="regText"> As stated previously, 
                         Encapsulation is essentially the ability for a 
-                        chunk of code (in this case a class) to be self contained
-                        and have data-hiding. The class allows for some information
-                        to be directly given while others to be protected. Lets 
+                        chunk of code (in this case a class) to be self-contained
+                        and have data hiding. The class allows for some information
+                        to be directly given while others to be protected. 
+                        The main use is to ensure the core contents of the class is never obstructed
+                        by external sources for safety.
+                        Lets 
                         adjust our Bird class to implement this idea!
                     </p>
-                    <p class="regText"> Lets begin by making all variables private!
+                    <p class="regText"> Let us begin by ensuring all variables are private!
                     </p>
                     <p class="codeSection">
                         <br>
@@ -251,26 +254,26 @@
                         sources. Private class variables may
                         be accessed from everywhere within its own class
                         but not from others. <br>
-                        Object.VariableName; ←← now leads to a syntax error.
+                        Object.VariableName; ←← now leads to a syntax error from outside the class.
                     </p>
                     <p class="regText">
-                        However, in practical uses this is not good.
-                        We want a bird object to exists and be 
-                        contained within itself, but we also want to 
+                        However, in practical application complete "invisibility" is not useful.
+                        We want a bird object to exist and have attributes 
+                        contained keep to itself, but we also want to 
                         observe these attributes and maybe make 
-                        some changes. We can achieve observation and mutation
+                        some indirect changes. We can achieve observation and mutation
                         of a class indirectly by using get methods
                         and set methods.
                     </p>
                     <p class="regText">
-                        GET methods are public methods which returns private attribute values.
+                        GET methods are public methods which return private attribute values.
                         <br>
-                        SET methods are public methods which indirectly allow mutation of attribute's value.
+                        SET methods are public methods which indirectly allow the mutation of an attribute's value.
                     </p>
                     <p class="regText">
                         For each variable that the Bird class has,
-                        lets allow external sources to indirectly "observe"
-                        its attributes and mutate them.
+                        let us allow external sources to indirectly "observe"
+                        it's attributes and mutate them.
                     </p>
                     <p class="codeSection">
                         <br>
@@ -327,7 +330,7 @@
                         <br>
                     </p>
                     <p class="regText">
-                        As you can see, now for every attribute it has a way of
+                        As you can see, for every attribute it has a way of
                         getting accessed externally with get methods, and 
                         every attribute can get mutated with the set methods. The 
                         set methods take in a parameter, and assign its 
@@ -341,16 +344,16 @@
                 <div class="collapsiblecontent2">
                     <h1 class="headerText inheriHeader"> &nbsp &nbsp Inheritance Example</h1>
                     <p class="regText"> Inheritance is the ability for another class
-                        to have the properties of another. The inheriting class
+                        to get passed on the properties of another. The inheriting class
                         is known as a subclass or child and the class that is being 
-                        inherited is called a superclass or parent. Below shows 
-                        the relationship between the two clases in terms of 
+                        inherited from is called a superclass or parent. Below shows 
+                        the relationship between the two classes in terms of 
                         UML: 
                     </p>
                     <image src="Pictures/UMLInheritance.png" class="uml"></image>
-                    <p class="regText"> Here is the implementation in java:
+                    <p class="regText"> Here is the implementation in Java:
                     </p>
-                    <p class="regText"> Here is a superclass, Animal:
+                    <p class="regText"> Here is a SuperClass, Animal:
                     </p>
                     <p class="codeSection">
                         <br>
@@ -376,10 +379,11 @@
                         &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">18</span> &nbsp &nbsp } <br>
                         <br>
                     </p>
-                    <p class="regText"> Now that we have a general superclass defining very general properties of all animals, lets INHERIT these
-                        very general properties of an Animal and create a Bird subclass. We're doing this because a Bird is-a Animal, but has more specific properties. 
+                    <p class="regText"> Now that we have a general SuperClass defining very general properties of all animals, let us INHERIT these
+                        very general properties of an Animal and create a Bird subclass. We're doing this because a Bird is-a Animal, 
+                        but has additional properties and functions. 
                     </p>
-                    <p class="regText"> To make a subclass, we use the keyword "extends" as shown here:
+                    <p class="regText"> To make a SubClass, we use the keyword "extends" as shown here:
                     </p>
                     <p class="codeSection">
                         <br>
@@ -394,7 +398,7 @@
                         &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp } <br>
                         <br>
                     </p>
-                    <p class="regText"> Now this Bird class on its own isn't really too useful. Yes it has the properties of an Animal, but its nothing more.
+                    <p class="regText"> Now this Bird class on its own isn't really too useful. Yes, it has the properties of an Animal, but it contains nothing more.
                         In order to be an effective use of "extends", we should define some specific properties and functions only unique to Bird.
                     </p>
                     <p class="regText"> In this chunk of code, Bird class adds new unique properties.
@@ -407,7 +411,7 @@
                         &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">2</span> &nbsp &nbsp <span style="color:greenyellow">public</span> <span style="color:rgb(47, 175, 255)"> class</span> Bird <span style="color:rgb(47, 255, 241)">extends</span> <span style="color:greenyellow">Animal</span> { <br>
                         &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">3</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Attributes / Variables</span> <br>
                         &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">4</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Although not explicitly stated, Bird inherits the variables of Animal.</span> <br>
-                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// The attribute of wingspan is a property that all bird's have, but not all animals do.</span> <br>
+                        &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">5</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// The attribute of wingspan is a property that all birds have, but not all animals do.</span> <br>
                         &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">6</span> &nbsp &nbsp &nbsp <span style="color:greenyellow">private</span> <span style="color:rgb(47, 255, 203)">double</span> wingspan; <br>
                         &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">7</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Some methods</span> <br>
                         &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">8</span> &nbsp &nbsp &nbsp <span style="color:rgba(255, 255, 255, 0.36)">// Although not explicitly stated, Bird inherits the methods of Animal.</span> <br>
@@ -417,33 +421,35 @@
                         &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">12</span> &nbsp &nbsp } <br>
                         <br>
                     </p>
-                    <p class="regText"> All animals have a certain height or weight, but not all animals have wingspan. However all birds have a wingspan.
+                    <p class="regText"> All animals have a certain height or weight, but not all animals have wingspan. However, all birds have a wingspan, thus
+                        allowing for this type of categorization.
                     </p>
-                    <p class="regText"> When creating a subclass, we may also add additional constructors specific to the subclass. Maybe 
+                    <p class="regText"> When creating a SubClass, we may also add additional constructors specific to the SubClass. Maybe 
                         a constructor in Bird allows itself to be created with a specified wingspan.
                     </p>
-                    <p class="regText"> Now you know the very basics to superclasses and subclases.
+                    <p class="regText"> Now you know the basics of inheritance and Java's SuperClasses and SubClases.
                     </p>
                     <p class="regText"> Some additional things you need to know are:</p>
                     <ul style="font-size: 200%; margin-left: 15%; color:rgb(240, 255, 244)">
                         <li> SubClassObject.SuperClassPublicMethod(); works! This is once again due to inheritance</li>
-                        <li> Superclass variables may create a new Subclass object (Superclass var = new Subclass();), but the Subclass's true 
-                            usages will never be used until the Superclass gets downcasted to a Subclass object type. </li>
-                        <li> A Superclass can create a new Subclass object, but a Subclass cannot create a new Superclass object.<br> 
+                        <li> SuperClass variables may create a new Subclass object (Superclass var = new Subclass();), but the SubClass's true 
+                            usages will never be used until the SuperClass gets downcasted to a Subclass object type (more about this
+                            in PolyMorphism). </li>
+                        <li> A SuperClass can create a new SubClass object, but a SubClass cannot create a new SupercCass object.<br> 
                         Superclass var = new Subclass(); ✅ <br>
                         Subclass var = new Superclass(); ❌</li>
-                        <li> Overriding is when a subclass has a function named the same as it's superclass. <br> 
+                        <li> Overriding is when a SubClass has a function named the same as its SuperClass. <br> 
                         More of this will be explained in the Polymorphism topic</li>
                         <li> A subclass << is-a >> superclass, but a superclass is not a subclass </li>
                         <li> A class may only inherit from or "extend" one class. </li>
-                        <li> However, you may have an entire tree of inheritence - where an overarching class gets extended by different
-                            independant subclasses, and those subclass get extended by others. Here is an example which attempts to emulate what 
+                        <li> However, you may have an entire tree of inheritance - where an overarching class gets extended by different
+                            independent SubClasses, and those SubClasses get extended by others. Here is an example which attempts to emulate what 
                         happens in nature. <br> 
                         <br> 
                         <br> 
                         <image src="Pictures/Tree.png" class="uml imagerainbowthing"></image>
                         </li><br><br>
-                        <li>The keyword super(); in a subclass is used to refer to its superclass properties, more about this can be found in Polymorphism</li>
+                        <li>The keyword super(); in a SubClass is used to refer to its SuperClass properties, more about this can be found in Polymorphism</li>
                     </ul>
             </div>
             <br>
@@ -451,17 +457,17 @@
                 <button class="collapsible-btn3">Open/Close <span style="color:yellow">POLYMORPHISM</span></button>
                 <div class="collapsiblecontent3">
                     <h1 class="headerText polyHeader"> &nbsp &nbsp Polymorphism Example</h1>
-                    <p class="regText"> As we know from inheritence, subclasses inherit the functions and attributes of their superclass.
-                        The idea of Polymorphism and its implementations in Java build on this and allow subclasses to 
-                        redefine what superclass' method does. This essentially allows a singular object to 
-                        have multiple forms depending on the level of object it is.
+                    <p class="regText"> As we know from inheritance, SubClasses inherit the functions and attributes of their SuperClass.
+                        The idea of Polymorphism and its implementations in Java build on this and allow SubClasses to 
+                        redefine what a SuperClass method does. This essentially allows a singular object to 
+                        have multiple forms depending on the level of what the object it is.
                     </p>
-                    <p class="regText"> Say we have a superclass Mammal, and subclass Bird. (Refer to the organism tree I made at the bottom of Inheritance).
-                        All (techincally most) mammals can travel in some shape or form. For simplicity purposes say a mammal can travel by foot. The subclass
+                    <p class="regText"> Say we have a SuperClass Mammal and SubClass Bird. (Refer to the organism tree I made at the bottom of Inheritance).
+                        All (technically most) mammals can travel in some shape or form. For simplicity purposes say a mammal can travel by foot. The subclass
                         Bird may redefine travelling with its special wings, but it can also travel by foot. 
                     </p>
                     <p class="regText"> When a Bird object is asked to travel, it will default to travelling by flight, but if the Bird class allows itself 
-                        to travel using it's superclass, it can via the keyword super.
+                        to travel using its superclass, it can via the keyword super, a reference to the object's parent.
                     </p>
                     <p class="regText"> Lets see this in code. Here is a Mammal class:
                     </p>
@@ -507,10 +513,10 @@
                         <br>
                         </span>
                     </p>
-                    <p class="regText"> The technique of a subclass redefining a superclass is called OVERRIDING. 
+                    <p class="regText"> The technique of a SubClass redefining a SuperClass is called OVERRIDING. 
                     </p>
-                    <p class="regText"> Here is a Bird class that instead calls its superclass's method, then adds its unique function. 
-                        It calls the superclass method via the keyword "super"
+                    <p class="regText"> Here is a Bird class that instead calls its SuperClass's method, then adds its unique function. 
+                        It calls the SuperClass method via the keyword "super", thus running the SuperClass's method first:
                     </p>
                     <p class="codeSection">
                         <br>
@@ -541,17 +547,17 @@
                         </span>
                         <br>
                     </p>
-                    <p class="regText"> The "super" keyword essentially calls the superclass of the class it is in.
+                    <p class="regText"> The "super" keyword essentially calls the SuperClass of the class it is in.
                     </p>
                     <p class="regText"> Some additional things you need to know are:</p>
                     <ul style="font-size: 200%; margin-left: 15%; color:rgb(240, 255, 244)">
                         <li> If you have <br>
                             SuperClass var = new SubClass();
                             <br>var may NOT use SubClass methods unless it is downcasted or is a overridden method. The overridden method only works because
-                            the method name exists within SuperClass allowing to be passed during Compile Time, then at runtime recognizes the SubClass overrider.
+                            the method name exists within SuperClass allowing it to compile during compile time, then at runtime recognizes the SubClass overrider.
                         </li>
                         <li> A SubClass may not create a SuperClass.</li>
-                        <li> If a SuperClass calls a method within itself, the SuperClass's method is used, not the SubClass's, even if the name overridden. </li>
+                        <li> If a SuperClass calls a method within itself, the SuperClass's method is used, not the SubClass's, even if the name is overridden. </li>
                     </ul>
             </div>
             <br>
@@ -560,8 +566,8 @@
                 <div class="collapsiblecontent4">
                     <h1 class="headerText absHeader"> &nbsp &nbsp Abstraction Example</h1>
                     <p class="regText"> As stated previously, 
-                        Abstraction is the idea that classes may be abstract. Classes may have predetermined methods, but no definition/code within the method - making it 
-                        essentially useless. To add use to such a vaguely defined class, it has to be extended with subclasses which purposefully overrides the methods
+                        Abstraction is the idea that classes may be abstract. Classes may have predetermined method names, but no definition/code within the method - making it 
+                        essentially useless. To add use to such a vaguely defined class, it has to be extended with SubClasses which purposefully override the methods
                         and gives it functions.
                     </p>
                     <p class="regText"> Here is a class called Solid:
@@ -586,10 +592,10 @@
                         &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">14</span> &nbsp &nbsp } <br>
                         <br>
                     </p>
-                    <p class="regText"> There are many different vriable names and method names, but not definition. The "abstract" keyword ensures that this class
+                    <p class="regText"> There are many different variable names and method names, but no definition or true function. The "abstract" keyword ensures that this class
                         may not be instantiated and allows for different syntax.
                     </p>
-                    <p class="regText"> Lets add some functionality with some subclasses which give proper meaning to undefined methods by using overriding and inheritance:
+                    <p class="regText"> Let us add some functionality with some SubClasses which give proper meaning to undefined methods by using overriding and inheritance:
                     </p>
                     <p class="regText"> &nbsp Class for Rectangular Prism:
                     </p>
@@ -653,7 +659,7 @@
                         &nbsp &nbsp<span style="color:rgba(255, 255, 255, 0.36)">22</span> &nbsp &nbsp } <br>
                         <br>
                     </p>
-                    <p class="regText"> As you can see, now the useless method of Solid, something abstract that can't do anything, is now useful and represent real objects.
+                    <p class="regText"> As you can see, now the useless method of Solid, something abstract that can't do anything, is now useful and represents real objects.
                         (Truly an Object Oriented coding style)
                     </p>
                     
