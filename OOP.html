@@ -8,7 +8,7 @@
 </head>
 <body class="parent">
     <div class="headSection">
-        <h1 class="title"><span style="color: rgb(0, 142, 83);">{ICS40}</span>//Objected Orieinted Programming</h1>
+        <h1 class="title"><span style="color: rgb(0, 142, 83);">{ICS40}</span>//Objected Oriented Programming</h1>
     </div>
     <div class="content">
         <br>
@@ -17,7 +17,7 @@
         </a>
         <div>
             <h1 class="ooptext"><span style="color: rgb(159, 242, 159);">Object Oriented Programming</span> (shortened as <span style="color: rgb(159, 242, 159);">OOP</span>) is a programming 
-                concept based on real world objects. The belief is that we can 
+                concept based on real-world objects. The belief is that we can 
                 effectively create anything we see in the real world in code 
                 and better. Some of its main concepts (which were focused on
                  in this course) are <span style="color:rgb(255, 0, 0); font-family: 'Courier New', Courier, monospace;">Encapsulation</span>, <span style="color:rgb(0, 255, 255); font-family: 'Courier New', Courier, monospace;">Inheritance</span>, <span style="color:rgb(255, 204, 0); font-family: 'Courier New', Courier, monospace;">Polymorphism</span>,
@@ -27,17 +27,17 @@
                 of transisters that take in input, and produce output.</h1>
             <h1 class="ooptext">Why might one even go through the hassle
                 of creating so called "<span style="color: rgb(159, 242, 159);">△ objects ◎</span>"? Benefits include code-reusability,
-                code-maintainability, a well structured system, security, flexibility,
+                code-maintainability, a well-structured system, security, flexibility,
                 and more.
             </h1>
-            <h1 class="ooptext">First, lets take a very brief look at what
+            <h1 class="ooptext">First, let us take a very brief look at what
                 the four main <span style="color: rgb(159, 242, 159);">OOP</span> topics taught in this course means conceptually.
             </h1>
             <div class="basicdefinition">
                 <p class="div1"><span style="color:rgb(255, 0, 0);"> - Encapsulation</p>
                 <p class="basicdefinitiontext div2" style="padding-bottom: 0px; padding-top: 0px; margin-top: 0px; margin-bottom: 0px; text-shadow: 0px 0px 30px rgba(255, 0, 0, 0.805);"> &nbsp &nbsp Encapsulation refers to having variables (attributes) and
-                    methods (functions/abilities) bundled up into a singular
-                    unit (class) which may have the ability to be private
+                    methods (functions/abilities) bundled up into a single
+                    unit (known as a class in Java) which may have the ability to be private
                     and/or gatekeep certain information. It helps achieve 
                     data-hiding. Its internal details are hidden from outside
                     itself, but it allows for interactions which are black-boxed
@@ -47,31 +47,33 @@
                 <p class="div4"style="padding-bottom: 0px; padding-top: 0px; margin-top: 0px; margin-bottom: 0px;"><span style="color:rgb(0, 255, 255)"> - Inheritance</p>
                 <p class="basicdefinitiontext div5" style="padding-bottom: 0px; padding-top: 0px; margin-top: 0px; margin-bottom: 0px;  text-shadow: 0px 0px 30px rgba(0, 242, 255, 0.621);"> &nbsp &nbsp Inheritance is the ability for a child object to "inherit" or 
                     get passed on traits, attributes, and abilities from 
-                    a "parent" object. This enables the new derived class to have
-                    the relationship "is-a" with it's base class + have its own
-                    unique factors - kind of like an evolution.
+                    a "parent" object. This enables the newly derived class to have
+                    the relationship "is-a" with its base class and 
+                    add-on additional information.
                 </p>
                 <image src="Pictures/Inheritence.png" class="icon div6"></image>
                 <p class="div7"><span style="color:rgb(255, 204, 0)" style="padding-bottom: 0px; padding-top: 0px; margin-top: 0px; margin-bottom: 0px;"> - Polymorphism</p>
-                <p class="basicdefinitiontext div8" style="padding-bottom: 0px; padding-top: 0px; margin-top: 0px; margin-bottom: 0px;  text-shadow: 0px 0px 30px rgba(246, 255, 0, 0.637);"> &nbsp &nbsp Polymorpism is the ability for something to have different 
+                <p class="basicdefinitiontext div8" style="padding-bottom: 0px; padding-top: 0px; margin-top: 0px; margin-bottom: 0px;  text-shadow: 0px 0px 30px rgba(246, 255, 0, 0.637);"> &nbsp &nbsp Polymorphism is the ability for something to have 
+                    different 
                     forms. In computer science, it is specifically
-                    children classes implementing and morphing its own unique features
+                    children classes implementing and morphing their own unique features
                     with the parent class. In Java, it is said that there is an Object 
-                    class at the top of the class hierachy. From that, there are childrens
-                    all of which have unique features some concrete, some abstract, together
+                    class at the top of the class hierarchy. From that, there are children
+                    all of which have unique features some concrete, some abstract, which together
                     creates the programs that we use every day.
                 </p>
                 <image src="Pictures/Polymorphism.png" class="icon div9" style="padding-bottom: 0px; padding-top: 0px; margin-top: 0px; margin-bottom: 0px;"></image>
                 <p class="div10"><span style="color:rgb(0, 255, 17)" style="padding-bottom: 0px; padding-top: 0px; margin-top: 0px; margin-bottom: 0px;"> - Abstraction</p>
                 <p class="basicdefinitiontext div11" style=" text-shadow: 0px 0px 30px rgba(0, 255, 42, 0.623);"> &nbsp &nbsp Abstraction is the idea that you can have 
                     literally anything as an object. You can even have
-                    abstract and unreal ideas, those of which that may
-                    be abstract classes or interfaces which as ideas
-                    such as so called variables and methods, but are not 
-                    properly/literally defined. This gives programmers the 
+                    abstract and intangible ideas, these may
+                    be abstract classes or interfaces. Abstract classes and interfaces have
+                    variables and methods, but they are not literally defined.
+                    (A method may exist, but its body/content are empty).
+                    This gives programmers the 
                     ability to start with any concept they can think of and work
-                    there way "down" by slowly adding definitions to their idea.
-                    This promotes code code-maintainability, organization
+                    their way "down" by slowly adding definitions to their idea in subclasses.
+                    This promotes code-reusability, code-maintainability, organization
                     and helps code become scalable.
                 </p>
                 <image src="Pictures/Abstraction.png" class="icon div12"></image>
@@ -81,18 +83,20 @@
         <div class="info">
             <h1 class="headerText"> &nbsp &nbsp So, how are these concepts represented in Java?</h1>
             <p class="regText">&nbsp &nbsp In Java, an object is an instance of a
-                class. A class is essentially a self contained chunk of code which 
+                class. A class is essentially a self contained chunk of code, usually exists one per file, which 
                 is a template/blueprint to what the general type of object
-                should be. Lets use an example. Say we want to have an object of a Blue-Jay.
-                In order to create this specific bird, we must first have a class or
-                blueprint which defines exactly what a general bird is. This definition 
-                within the class contains various different attributes which the 
+                should be. Let us use an example. Say we want to have an object of a Blue-Jay.
+                To create this specific bird, we must first have a class or
+                blueprint which defines what a general bird is. In order to have a Blue-Jay object,
+                we'd need to define this Bird in a way such that it has the same properties of a real blue jay.
+                The definition 
+                within the class contains various attributes which the 
                 bird has (represented as variables) and various
-                different functions that a bird may do (represented as methods).
-                <br> So, lets outline some properties of a bird.
+                functions that a bird can do (represented as methods).
+                <br> So, let us outline some properties of a bird.
             </p>
             <image src="Pictures/Bird.png" style="padding-left:47%; filter:hue-rotate(-70deg)"></image>
-            <p class="regText"> A bird has various different attributes/properties, some of which are it's:</p>
+            <p class="regText"> A bird has various different attributes/properties, some of which are its:</p>
             <ul style="font-size: 200%; margin-left: 15%; color:rgb(240, 255, 244)">
                 <li> Height </li>
                 <li> Weight </li>
@@ -101,14 +105,14 @@
                 <li> DNA</li>
                 <li> Things it may eat</li>
             </ul>
-            <p class="regText"> A bird has various different things that it has the ability to do. Some of which are:</p>
+            <p class="regText"> A bird has various different things it has the ability to do. Some of these are:</p>
             <ul style="font-size: 200%; margin-left: 15%; color:rgb(240, 255, 244)">
                 <li> Walking </li>
                 <li> Hunting </li>
                 <li> Eating </li>
                 <li> Flying </li>
             </ul>
-            <p class="regText">By adding more and more information to these lists of 
+            <p class="regText">By adding more and more information to the lists of 
                 properties and abilities, we get closer and closer to 
                 defining what the concept of a bird is!
             </p>
@@ -120,7 +124,7 @@
             <p class="regText">Here is the format for a basic class in UML:</p>
             <image src="Pictures/UMLDefault.png" class="uml"></image>
             <p class="regText">In UML, "+" may replace public, "-" may replace private, and "#" may replace protected</p>
-            <p class="regText">Now lets add our information about the Bird Class, containing informations
+            <p class="regText">Now lets add our information about the Bird Class, containing information
                 about a barebones bird:
             </p>
             <image src="Pictures/UMLBird.png" class="uml"></image>
