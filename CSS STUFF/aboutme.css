@@ -1,0 +1,173 @@
+body{
+    zoom:75%;
+}
+.parent{
+    display: grid;
+    grid-template-columns: 0.2fr repeat(3, 1fr) 0.2fr;
+    grid-template-rows: 300px 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(0deg,rgb(0, 37, 31),rgb(0, 0, 0));
+    background-size:300% 300%;
+    animation: backgroundColorTransition 3s ease-in-out infinite alternate;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+@keyframes backgroundColorTransition {
+    0%{background-position: 0 50%;}
+    100%{}
+}
+.headSection{
+    grid-area: 1 / 2 / 2 / 5;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(#002917, #000000);
+    border-radius: 15px;
+}
+.title{
+    font-family: Impact, auto;
+    font-size: 900%;
+    animation: titleScaling 5s ease-in-out infinite alternate;
+    transition: color 1s ease-in-out;
+}
+.title:hover{
+    color:rgb(132, 255, 0);
+}
+@keyframes titleScaling {
+    0%{transform: translateY(25px);}
+    100%{transform: translateY(-25px);}
+}
+
+.content{
+    grid-area: 2 / 2 / 3 / 5;
+    display:grid;
+    background: rgb(0, 15, 9);
+    border-radius: 10px;
+    font-family: sans-serif, auto;
+}
+.backButton {
+    padding: 10px 10px;
+    font-weight: bold;
+    margin: 5px 10px;
+    border: none;
+    outline: none;
+    color: rgb(0, 255, 115);
+    background: #000000;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    transition: colourChange 2s infinite alternate;
+}
+@keyframes colourChange {
+    0%{color:blue;}
+    100%{color:inherit;}
+}
+.backButton:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #0059ff,
+      #0095ff,
+      #00ffb7,
+      #48ff00,
+      #b3ff00,
+      #00ff80,
+      #00ffc8,
+      #0080ff,
+      #005eff
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
+.backButton:active {
+    color: #000;
+}
+.backButton:active:after {
+    background: transparent;
+}
+.backButton:hover:before {
+    opacity: 1;
+}
+.backButton:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #001f15;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+.a {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}    
+.aa { grid-area: 1 / 1 / 2 / 2; }
+.ab { 
+    grid-area: 1 / 2 / 2 / 3;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+.card { 
+    position: relative;
+    width: 500px;
+    height: 600px;
+    perspective: 1000px;
+    border-radius: 25px;
+}
+.cardInner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 25px;
+}
+.card:hover .cardInner{
+    transform: rotateY(-180deg);
+}
+.cardFront, .cardBack{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: blue;
+    border-radius: 25px;
+}
+.cardBack{
+    transform: rotateY(180deg);
+    background-color: green;
+}
+h1{
+    animation: thing 4s alternate infinite;
+}
+@keyframes thing {
+    0%{color:rgb(0, 225, 255)}
+    100%{color:rgb(238, 255, 0)}
+}
