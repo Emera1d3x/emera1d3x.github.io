@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sehan Munir HomePage</title>
+    <link rel="stylesheet" href="homePage.css">
+    <script src="script.js"></script>
+    <script src="cursor.js"></script>
+</head>
+<body>
+    <!--<div class="reverse"></div>-->
+    <div class="cursor"><img class="cursorImage" src="ImageFolder/Cursor.png"></div>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="ImageFolder/Logo.png" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#aboutMe"><button>About</button></a></li>
+            <li><a href="construction.html"><button>Projects</button></a></li>
+            <li><a href="construction.html"><button>Graphics</button></a></li>
+            <li><a href="construction.html"><button>Experiences</button></a></li>
+            <li><a href="resume.html"><button>Resume</button></a></li>
+        </ul>
+        <div class="icons">
+            <a></a>
+            <a href="construction.html"><img src="ImageFolder/ContactMe.png" alt="ContactMe"></a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()"><img src="ImageFolder/Ham.png"></div>
+        <script>
+            function toggleMenu() {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.toggle('show');
+            }  
+        </script>
+    </div>
+    
+    <div class="startPage">
+        <h1 class="title">SEHAN MUNIR</h1>
+        <div class="leavesHolder">
+            <div class="leaves">
+                <img class="leafImage" src="ImageFolder/Leaves.png">
+            </div>
+        </div>
+        <p class="meCaption" id="selfProclaimedTitle">Programmer</p>
+        <a class="contact-button" href="#">CONTACT ME</a>
+        <img class="arrow" src="ImageFolder/Arrow.png">    
+    </div>
+    <div id="aboutMe" class="scrollContent">
+        <div class="aboutMe">
+            <section class="aboutMe1">
+                <h1 class="aboutMe1Title"> ABOUT ME</h1>
+                <p class="aboutMeText" style="text-align: left; font-size:medium; font-weight: bold;">
+                    <span style="color:rgb(80, 7, 7)">public class</span> <span style="color:rgb(66, 41, 187)">About</span> { <br> <br>
+                    &nbsp &nbsp <span style="color:rgb(22, 108, 33)">String</span> name = "Sehan Munir";<br>
+                    &nbsp &nbsp <span style="color:rgb(22, 108, 33)">int</span> age = 16;<br>
+                    &nbsp &nbsp <span style="color:rgb(22, 108, 33)">int</span> grade = 11;<br>
+                    &nbsp &nbsp <span style="color:rgb(22, 108, 33)">String</span> school = "WLMAC CI";<br><br>
+                    &nbsp &nbsp <span style="color:rgb(80, 7, 7)">public void</span> <span style="color:rgb(66, 41, 187)">getAffiliations</span> () {<br>
+                    &nbsp &nbsp &nbsp &nbsp affiliation.<span style="color:rgb(22, 108, 33)">add</span>("FTC Team - Programming Lead");<br>
+                    &nbsp &nbsp &nbsp &nbsp affiliation.<span style="color:rgb(22, 108, 33)">add</span>("WLMAC Robotics Club - Cofounder");<br>
+                    &nbsp &nbsp &nbsp &nbsp affiliation.<span style="color:rgb(22, 108, 33)">add</span>("WLMAC Cubing Club - Comms.");<br>
+                    &nbsp &nbsp &nbsp &nbsp affiliation.<span style="color:rgb(22, 108, 33)">add</span>("WLMAC Atheltics Council");<br>
+                    &nbsp &nbsp &nbsp &nbsp affiliation.<span style="color:rgb(22, 108, 33)">add</span>("Highview Childcare Center - Volunteer");<br>
+                    &nbsp &nbsp }<br> <br>
+                    &nbsp &nbsp <span style="color:rgb(80, 7, 7)">public void</span> <span style="color:rgb(66, 41, 187)">getInterests</span> () {<br>
+                    &nbsp &nbsp &nbsp &nbsp interest.<span style="color:rgb(22, 108, 33)">add</span>("Programming");<br>
+                    &nbsp &nbsp &nbsp &nbsp interest.<span style="color:rgb(22, 108, 33)">add</span>("Graphic Design");<br>
+                    &nbsp &nbsp &nbsp &nbsp interest.<span style="color:rgb(22, 108, 33)">add</span>("Web-Dev");<br>
+                    &nbsp &nbsp &nbsp &nbsp interest.<span style="color:rgb(22, 108, 33)">add</span>("Sports");<br>
+                    &nbsp &nbsp }<br> <br>
+                    }
+                </p>
+                <p class="aboutMeText">
+                    ||===================||  <br>
+                    Look around this website to see my past programming projects, graphic designs, and experiences! <br>
+                    Please feel free to contact me for any questions/concerns! 
+                </p>
+                <br><br><br><br>
+                <br><br><br><br>
+            </section>
+            <section class="aboutMe2">
+                <image class="me" src="ImageFolder/Photo.png"></image>
+                <h1 style="font-family: headingFont; font-weight: lighter; color: #003130;"> Photo Update Soon</h1>
+                <p style="font-family: contentFont; color: #003130;"> I'm Sehan, a gr. 11 student currently residing in Toronto, Ontario. <br>
+                    I love creating stuff and I hope to make a meaningful impact through the means of technology!<br>
+                    Things you may find me doing in my free time include creating promotional posters for the clubs I run, competitive programming, 
+                    or creating
+                    personal projects for things I am interested in! </p>
+            </section>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerCol1">
+            <h3 class="footerTitle"> ME </h3>
+            <p> Sehan Munir </p>
+            <p> October 6, 2008 </p>
+            <p> WLMAC CI  MaCS Student</p>
+        </div>
+        <div class="footerCol2">
+            <h3 class="footerTitle"> Website Links </h3>
+            <p class="webLinks"><a href="index.html#aboutMe"> About Me </a></p>
+            <p class="webLinks"><a href="construction.html"> Projects</a> </p>
+            <p class="webLinks"><a href="construction.html"> Experiences</a> </p>
+            <p class="webLinks"><a href="construction.html">Graphic Designs</a></p>
+            <p class="webLinks"><a href="resume.html"> Resume</a> </p>
+            <p class="webLinks"><a href="construction.html"> Contact</a> </p>
+        </div>
+        <div class="footerCol3">
+            <h3 class="footerTitle"> Contact </h3>
+            <p> sehanmunirgoldar@gmail.com </p>
+            <p> 647-853-0083 </p>
+            <p> Toronto, Ontario </p>
+            <a href="https://github.com/Emera1d3x" target="_blank"><img class="footerContact" src="ImageFolder/Github.png"></a>
+            <a href="https://www.linkedin.com/in/sehan-munir-932306335/" target="_blank"><img class="footerContact" src="ImageFolder/LinkedIn.png"></a>
+            <a href="https://www.instagram.com/emera1d3x_/" target="_blank"><img class="footerContact" src="ImageFolder/Instagram.png"></a>
+        </div>
+    </div>
+</body>
+</html>
