@@ -213,9 +213,9 @@ body::-webkit-scrollbar-thumb {
     overflow: hidden;
 }
 .title {
-    margin-top: 30vh;
+    margin-top: 20vh;
     z-index: 1;
-    font-size: 7rem;
+    font-size: 3rem;
     color: #feffd3;
     color: linear-gradient(0deg,#006A4F
     ,#004241);
@@ -272,27 +272,6 @@ body::-webkit-scrollbar-thumb {
         opacity: 50;
         transform: translateY(0px);
     }
-}
-.title {
-    margin-top: 20vh;
-    z-index: 1;
-    font-size: 3rem;
-    color: #feffd3;
-    color: linear-gradient(0deg,#006A4F
-    ,#004241);
-    margin-bottom: 0px;
-    font-family: headingFont;
-    animation: fadeInBottom 1s forwards 0.5s;
-    animation: nameColourChange 7s infinite;
-    transition: all 0.5s;
-}
-.title:hover {
-    transform: scaleX(1.1);
-}
-
-.resumeImage{
-    z-index: 1;
-    width: 100vw;
 }
 .footer{
     width: 100%;
