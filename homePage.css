@@ -348,7 +348,7 @@ body::-webkit-scrollbar-thumb {
     font-size: xx-large;
     color: #003130; 
     font-size: 3vw;
-    transition: all 1s;
+    transition: all 0.2s;
 }
 .aboutMe1Title:hover{
     transform:scale(1.1);
@@ -357,7 +357,7 @@ body::-webkit-scrollbar-thumb {
     font-family: contentFont;
     font-size:larger;
     color: #003130;
-    transition: all 1s;
+    transition: all 0.2s;
 }
 .aboutMeText:hover{
     transform:scale(1.01);
