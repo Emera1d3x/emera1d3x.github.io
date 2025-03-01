@@ -123,10 +123,9 @@ body::-webkit-scrollbar-thumb {
     margin-right: 10px;
     display: flex;
     align-items: center;
-    transition: all 1s;
 }
 
-.logo:hover {
+.navbar .logo img:hover {
     transform: rotate(360deg);
     cursor: none;
 }
@@ -136,6 +135,7 @@ body::-webkit-scrollbar-thumb {
     height: 40px;
     margin-right: 10px;
     cursor: none;
+    transition: all 1s;
 }
 
 .navbar ul {
