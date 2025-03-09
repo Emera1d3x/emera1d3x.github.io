@@ -10,6 +10,14 @@ html{
     scroll-behavior: smooth;
     cursor: none;
 }
+::selection {
+    background-color: rgba(227, 180, 72, 0.5);;
+    color: rgb(23,89,79);
+}
+a {
+    color: #E3B448;
+    text-decoration: none;
+}
 body {
     margin: 0;
     font-family: Arial, sans-serif;
