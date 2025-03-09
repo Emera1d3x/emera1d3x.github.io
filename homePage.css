@@ -339,6 +339,8 @@ body::-webkit-scrollbar-thumb {
 
 .aboutMe {
     margin-top: 0;
+    background-image: url(ImageFolder/aboutMeBackground.svg);
+    background-size: cover;
     background-color: #f5f5b8;
     width: 100%;
     display: flex;

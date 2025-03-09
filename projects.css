@@ -24,6 +24,8 @@ body {
     background-color: #f5f5b8;
     height: 100vh;
     overflow-x: hidden;
+    background-image: url(ImageFolder/aboutMeBackground.svg);
+    background-size: cover;
 }
 body::-webkit-scrollbar {
     width: 0.25rem;
@@ -342,5 +344,65 @@ body::-webkit-scrollbar-thumb {
 
 .selected {
     background-color: #024d3a !important;
-    color: rgb(234, 245, 181) !important;
+    color: #eaf5b5 !important;
+}
+
+.projectContainer{
+    aspect-ratio : 1 / 1;
+    border: 4px solid #024d3a;
+    border-radius: 10px;
+    background-color: #024d3a;
+    text-align: center;
+    color: #f0db63;
+}
+.projectMainImage{
+    background-color: black;
+    height: 80%;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.projectMainImage img{
+    height: calc(100% - 10px);
+    border-radius: 10px 10px 10px 10px;
+    border: solid black 5px;
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: transform 0.3s;
+}
+
+.projectMainImage img:hover{
+    transform: scale(1.04);
+}
+
+.projectMainName{
+    padding-top: 5px;
+    font-family: contentFont;
+    font-weight: bolder;
+}
+
+.iconContainerMain{
+    height: 20%;
+}
+
+.iconMain{
+    padding-top: 10px;
+    height: 65%;
+    padding-right: 5px;
+    transition: filter 0.3s;
+}
+.iconMain:hover{
+    filter:brightness(1.4);
+}
+
+.projectSection{
+    display: grid;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    padding-bottom: 5vh;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: 15px;
+    justify-content: center;
 }

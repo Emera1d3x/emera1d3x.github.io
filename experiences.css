@@ -24,6 +24,8 @@ body {
     background-color: #f5f5b8;
     height: 100vh;
     overflow-x: hidden;
+    background-image: url(ImageFolder/aboutMeBackground.svg);
+    background-size: cover;
 }
 body::-webkit-scrollbar {
     width: 0.25rem;

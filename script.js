@@ -2,10 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const hoverText = document.querySelector("#selfProclaimedTitle");
     const textQueue = [
         "Competitive Programmer",
-        "Graphic Designer",
+        "Software Engineer",
         "Tech Enthusiast",
         "Web Developer",
-        "a chill guy"
+        "a chill guy",
+        "Creator"
     ];
 
     let currentIndex = 0;
