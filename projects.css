@@ -427,7 +427,7 @@ body {
 .projectPopUpContainer {
     z-index: 10;
     position: fixed;
-    display: flex;
+    display: none;
     top: 50%;
     left: 50%;
     height: 50vh;

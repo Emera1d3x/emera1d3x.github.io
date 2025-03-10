@@ -378,16 +378,22 @@ body::-webkit-scrollbar-thumb {
 }
 .aboutMe2 {
     padding-top: 30px;
+    padding-bottom: 30px;
     min-width: 250px;
     padding-left: 130px;
     padding-right: 130px;
     flex:1;
 }
 .me{
-    margin-top: 120px;
-    height: 350px;
+    margin-top: 15vh;
     width: auto;
-    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.me img{
+    width: 70%;
 }
 
 .footer{
