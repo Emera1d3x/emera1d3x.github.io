@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="projects.css">
     <script src="script.js"></script>
     <script src="cursor.js"></script>
+    <script src="project.js"></script>
     <link rel="icon" href="ImageFolder/Logo.png" type="image/ico">
 </head>
 <body>
@@ -48,7 +49,7 @@
             <h3> Click on a project for more details! </h3>
         </div>
         <div class="projectSection">
-            <div class="projectContainer">
+            <div class="projectContainer" data-name="booleanalgebrasimulator">
                 <div class="projectMainImage">
                     <img src="ImageFolder/BooleanAlgebraSimulatorDisplay.png">
                 </div>
@@ -58,7 +59,7 @@
                     <a target="_blank" href="https://emera1d3x.github.io/Boolean-Algebra/homepage.html"><img src="ImageFolder/WebLink.png" class="iconMain"></a>
                 </div>
             </div>
-            <div class="projectContainer">
+            <div class="projectContainer" data-name="ics3">
                 <div class="projectMainImage">
                     <img src="ImageFolder/ICS3Display.png">
                 </div>
@@ -67,7 +68,7 @@
                     <a target="_blank" href="https://github.com/Emera1d3x/Paleontology-Childrens-Game"><img src="ImageFolder/GithubLink.png" class="iconMain"></a>
                 </div>
             </div>
-            <div class="projectContainer">
+            <div class="projectContainer" data-name="ics4">
                 <div class="projectMainImage">
                     <img src="ImageFolder/ICS4Display.png">
                 </div>
@@ -76,7 +77,7 @@
                     <a target="_blank" href="https://github.com/Emera1d3x/AI-Awareness-Game"><img src="ImageFolder/GithubLink.png" class="iconMain"></a>
                 </div>
             </div>
-            <div class="projectContainer">
+            <div class="projectContainer" data-name="bionichand">
                 <div class="projectMainImage">
                     <img src="ImageFolder/BionicHandEventDisplay.png">
                 </div>
@@ -86,7 +87,7 @@
                     <a target="_blank" href="https://docs.google.com/presentation/d/1W0QQvxYG8f8q-AiM2TE1kDewdg24RGMVuyxsQ_ZDe48/edit"><img src="ImageFolder/WebLink.png" class="iconMain"></a>
                 </div>
             </div>
-            <div class="projectContainer">
+            <div class="projectContainer" data-name="maplebiz">
                 <div class="projectMainImage">
                     <img src="ImageFolder/MapleBizDisplay.png">
                 </div>
@@ -96,7 +97,7 @@
                     <a target="_blank" href="https://github.com/Emera1d3x/HackCanada-MapleBiz-FrontEnd"><img src="ImageFolder/GithubLink.png" class="iconMain"></a>
                 </div>
             </div>
-            <div class="projectContainer">
+            <div class="projectContainer"  data-name="ftc">
                 <div class="projectMainImage">
                     <img src="ImageFolder/FTCDisplay.png">
                 </div>
@@ -105,7 +106,7 @@
                     <a target="_blank" href="https://github.com/Emera1d3x/FTC-24-25-CODE"><img src="ImageFolder/GithubLink.png" class="iconMain"></a>
                 </div>
             </div>
-            <div class="projectContainer">
+            <div class="projectContainer" data-name="cp">
                 <div class="projectMainImage">
                     <img src="ImageFolder/CompetitiveProgrammingDisplay.png">
                 </div>
@@ -115,6 +116,162 @@
                 </div>
             </div>
         </div>
+        <div class="projectPopUpSection">
+            <div class="projectPopUpContainer" data-target="booleanalgebrasimulator">
+                <div class="projectPopUpImages">
+                    <img src="ImageFolder/BooleanAlgebraSimulatorDisplay.png">
+                </div>
+                <div class="projectPopUpRight">   
+                 <span class="close">&times;</span>
+                    <div class="projectPopUpName"> Boolean Algebra Simulator</div>
+                    <br>
+                    <div class="projectPopUpDescription"> Simulator created for enhancement part of 
+                        MHF4U0 (AP Advanced Function) mathematician poster project. 
+                        My mathematician was George Boole and my topic was his contributions to 
+                        boolean algebra and logical functions.
+                    </div>
+                    <br>
+                    <div class="projectPopUpToolsUsed">Tools Used: <span style="font-weight: bolder;">HTML, CSS, JavaScript</div>
+                    <div class="iconContainerPopUp"> 
+                        <a target="_blank" href="https://github.com/Emera1d3x/Boolean-Algebra-Simulator"><img src="ImageFolder/GithubLink.png" class="iconMain"></a>
+                        <a target="_blank" href="https://emera1d3x.github.io/Boolean-Algebra/homepage.html"><img src="ImageFolder/WebLink.png" class="iconMain"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="projectPopUpContainer" data-target="ics3">
+                <div class="projectPopUpImages">
+                    <img src="ImageFolder/ICS3Display.png">
+                </div>
+                <div class="projectPopUpRight">   
+                 <span class="close">&times;</span>
+                    <div class="projectPopUpName"> Paleontology Children's Game</div>
+                    <br>
+                    <div class="projectPopUpDescription"> An educational
+                        paleontology game aimed at children. 
+                        Sublevels include educational portion, maze and sandbox game.
+                        Local database for leaderboard system exists.
+                        ICS3UP (MaCS Computer Science Gr. 11) culminating project.
+                        <br> Created by Sehan Munir and Daniel Iravani.
+                    </div>
+                    <br>
+                    <div class="projectPopUpToolsUsed">Tools Used: <span style="font-weight: bolder;"> Java 8, ReadyToProgram, HSA</div>
+                    <div class="iconContainerPopUp"> 
+                        <a target="_blank" href="https://github.com/Emera1d3x/Paleontology-Childrens-Game"><img src="ImageFolder/GithubLink.png" class="iconMain"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="projectPopUpContainer" data-target="ics4">
+            <div class="projectPopUpImages">
+                <img src="ImageFolder/ICS4Display.png">
+            </div>
+            <div class="projectPopUpRight">   
+             <span class="close">&times;</span>
+                <div class="projectPopUpName"> AI Awareness game</div>
+                <br>
+                <div class="projectPopUpDescription"> An "AI training game". Company 
+                    teaches AI about Cybersecurity & Online Safety while human "trains" it.
+                    Sublevels include password and email fraud detection game.
+                    Local database for leaderboard system exists.
+                    <br> ICS4U0 (AP Computer Science) culminating project.
+                    <br> Created by Sehan Munir and Daniel Iravani.
+                </div>
+                <br>
+                <div class="projectPopUpToolsUsed">Tools Used: <span style="font-weight: bolder;"> Java, JavaX, JFrame, etc.</div>
+                <div class="iconContainerPopUp"> 
+                    <a target="_blank" href="https://github.com/Emera1d3x/Paleontology-Childrens-Game"><img src="ImageFolder/GithubLink.png" class="iconMain"></a>
+                </div>
+            </div>
+        </div>
+        <div class="projectPopUpContainer" data-target="bionichand">
+            <div class="projectPopUpImages">
+                <img src="ImageFolder/BionicHandEventDisplay.png">
+            </div>
+            <div class="projectPopUpRight">   
+             <span class="close">&times;</span>
+                <div class="projectPopUpName"> Bionic Hand Event</div>
+                <br>
+                <div class="projectPopUpDescription"> 
+                    Bionic hand template code + breadboard structure. An event used 
+                    to teach WLMAC Robotics Club Members about potentiometers.
+                </div>
+                <br>
+                <div class="projectPopUpToolsUsed">Tools Used: <span style="font-weight: bolder;"> Arduino, Tinkercard, C++</div>
+                <div class="iconContainerPopUp"> 
+                    <a target="_blank" href="https://github.com/Emera1d3x/Bionic-Hand-Robotics-Club"><img src="ImageFolder/GithubLink.png" class="iconMain"></a>
+                    <a target="_blank" href="https://docs.google.com/presentation/d/1W0QQvxYG8f8q-AiM2TE1kDewdg24RGMVuyxsQ_ZDe48/edit"><img src="ImageFolder/WebLink.png" class="iconMain"></a>
+                </div>
+            </div>
+        </div>
+        <div class="projectPopUpContainer" data-target="maplebiz">
+            <div class="projectPopUpImages">
+                <img src="ImageFolder/MapleBizDisplay.png">
+            </div>
+            <div class="projectPopUpRight">   
+             <span class="close">&times;</span>
+                <div class="projectPopUpName"> MapleBiz (HackCanada)</div>
+                <br>
+                <div class="projectPopUpDescription"> 
+                    My, and my teammates first hackathon! 
+                    <br>
+                    Prompt: Tackle a Canadian Issue <br>
+                    Our Product: Maple Biz is an AI powered Canadian Business 
+                    Outsource Platform. <br>
+                    Made by Sehan Munir, Rick Huang, Jason Wu, Erik Zhelasko.
+                    I particularly worked on the frontend and design, but am 
+                    excited to work on other AI projects on my own.
+                </div>
+                <br>
+                <div class="projectPopUpToolsUsed">Tools Used: <span style="font-weight: bolder;"> Gemini, Firebase, NodeJS, HTML, CSS, JavaScript, React </div>
+                <div class="iconContainerPopUp"> 
+                    <a target="_blank" href="https://github.com/ThatRickHuang/HackCanada"><img src="ImageFolder/GithubLink.png" class="iconMain"></a>
+                    <a target="_blank" href="https://github.com/Emera1d3x/HackCanada-MapleBiz-FrontEnd"><img src="ImageFolder/GithubLink.png" class="iconMain"></a>
+                </div>
+            </div>
+        </div>
+        <div class="projectPopUpContainer" data-target="ftc">
+            <div class="projectPopUpImages">
+                <img src="ImageFolder/FTCDisplay.png">
+            </div>
+            <div class="projectPopUpRight">   
+             <span class="close">&times;</span>
+                <div class="projectPopUpName"> WLMAC FTC (24/25)</div>
+                <br>
+                <div class="projectPopUpDescription"> 
+                    Our schools first FTC team!
+                    <br>
+                    I was the programming lead. 
+                    Objective was to ensure the controls are as 
+                    simple and compliant as possible. Autonomous features are in progress.
+                </div>
+                <br>
+                <div class="projectPopUpToolsUsed">Tools Used: <span style="font-weight: bolder;"> Gradle, Java, Android Studio</div>
+                <div class="iconContainerPopUp"> 
+                    <a target="_blank" href="https://github.com/Emera1d3x/FTC-24-25-CODE"><img src="ImageFolder/GithubLink.png" class="iconMain"></a>
+                </div>
+            </div>
+        </div>
+        <div class="projectPopUpContainer" data-target="cp">
+            <div class="projectPopUpImages">
+                <img src="ImageFolder/CompetitiveProgrammingDisplay.png">
+            </div>
+            <div class="projectPopUpRight">   
+             <span class="close">&times;</span>
+                <div class="projectPopUpName"> Competitive Programming Solves</div>
+                <br>
+                <div class="projectPopUpDescription"> 
+                    One of my hobbies. Contains some IOI, USACO, CCC, CCO & more solves. <br>
+                    I particularly use DMOJ: Modern Online Judge but also MCPT (school's fork). <br>
+                    I wish to create my own contest one day. 
+                </div>
+                <br>
+                <div class="projectPopUpToolsUsed">Tools Used: <span style="font-weight: bolder;"> C++, Java</div>
+                <div class="iconContainerPopUp"> 
+                    <a target="_blank" href="https://github.com/Emera1d3x/SehanMunir_CompetitiveProgramming"><img src="ImageFolder/GithubLink.png" class="iconMain"></a>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
     <div class="footer">
         <div class="footerCol1">
