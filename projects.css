@@ -355,6 +355,10 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     color: #f0db63;
 }
+.projectContainer:hover{
+    box-shadow: 0 4px 8px 0 #362b01, 0 6px 20px 0 #362b01;
+    text-decoration: underline;
+}
 .projectMainImage{
     background-color: black;
     height: 80%;
