@@ -450,21 +450,58 @@ body {
     align-items: center;
 }
 
-.projectPopUpImages img{
+.slider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+	overflow: hidden;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+	scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+.slider img{
     max-width: 95%;
     max-height: 95%;
-    object-fit: contain;
-    border-radius: 10px 10px 10px 10px;
+    object-fit: cover;
+    border-radius: 20px;
     width: auto;
     overflow-x: hidden;
     overflow-y: hidden;
     transition: transform 0.3s;
+    transform-origin: center;
+    flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
 }
 
-.projectPopUpImages img:hover{
-    transform: scale(105%);
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	z-index: 1;
 }
 
+.slider-nav a {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #efe123;
+	opacity: 0.6;
+	transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+	opacity: 1;
+}
 .projectPopUpRight{
     padding: 10px 10px 10px 10px;
     text-align: right;
