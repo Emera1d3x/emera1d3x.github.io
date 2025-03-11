@@ -528,3 +528,10 @@ body {
 .iconContainerPopUp{
     height: 5vh;
 }
+.close{
+    font-size: larger;
+    color: #f0ba63b1;
+}
+.close:hover{
+    color: #f0db63;
+}
