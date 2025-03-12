@@ -482,6 +482,25 @@ body {
     padding-bottom: 2.5%;
 }
 
+.slider video{
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: cover;
+    border-radius: 20px;
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: transform 0.3s;
+    transform-origin: center;
+    flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
 .slider-nav {
 	display: flex;
 	column-gap: 1rem;
