@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const textQueue = [
         "Competitive Programmer",
         "Software Engineer",
-        "Tech Enthusiast",
+        "Graphic Designer",
         "Web Developer",
-        "a chill guy",
-        "Creator"
+        "Creator",
+        "a chill guy"
     ];
 
     let currentIndex = 0;
