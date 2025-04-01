@@ -359,9 +359,8 @@ body::-webkit-scrollbar-thumb {
 .aboutMe1Title{
     font-family: headingFont; 
     font-weight: lighter; 
-    font-size: xx-large;
     color: #003130; 
-    font-size: 3vw;
+    font-size: 3rem;
     transition: all 0.2s;
 }
 .aboutMe1Title:hover{
@@ -369,7 +368,7 @@ body::-webkit-scrollbar-thumb {
 }
 .aboutMeText{
     font-family: contentFont;
-    font-size:larger;
+    font-size: 1.1em;
     color: #003130;
     transition: all 0.2s;
 }
@@ -385,15 +384,17 @@ body::-webkit-scrollbar-thumb {
     flex:1;
 }
 .me{
+    background-image: url(ImageFolder/me.jpg);
+    background-size: cover;
+    border: rgb(14, 59, 51) solid 5px;
     margin-top: 15vh;
-    width: auto;
+    height: 60vh;
+    width: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.me img{
-    width: 70%;
+    justify-self: center;
+    border-radius: 50%;
 }
 
 .footer{
