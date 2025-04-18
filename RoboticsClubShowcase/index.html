@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Robotics Club Showcase - Line Following Bot</title>
+    <link rel="stylesheet" href="index.css"/>
+    <script src="index.js"></script>
+    <link rel="icon" href="Images/MRC_Logo.png" type="image/ico"/>
+</head>
+<body>
+    <div class="arrowLeft" onclick="changeSlide(-1)"><-</div>
+    <div class="main-container">
+        <div class="slide active" id="start">
+            <h1 class="title1">Making a</h1>
+            <h1 class="title2"><em>Semi-Autonomous</em></h1>
+            <h1 class="title3"><u>(Line–Following)</u></h1>
+            <h1 class="title4"><u>BOT</u></h1>
+            <img class="bot-img" src="Images/MRC_Logo.png" alt="Line-Following Bot"/>
+        </div>
+        <div class="slide" id="building">
+            <h1 class="buildingTitle1">🔨<u>Building</u>🔧</h1>
+            <img class="googleslides" src="Images/googleslides.png"/>
+            <a href="https://docs.google.com/presentation/d/1_L0LNgEjtG89szAOX-0eW_nYYfMAR5ZDYjyrGRUasLM/edit?usp=sharing" target="_blank" class="buildingLink">LINK</a>
+        </div>
+        <div class="slide" id="coding">
+            <h1 class="codingTitle1">💻<u>Coding</u>📱</h1>
+            <div class="codingSections">
+                <div class="codingSectionLeft" ondragover="event.preventDefault()" ondrop="drop(event, 'left')">
+                    <div class="codingBlocks">
+                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="imlr">
+                            initialize <span style="color: #ff5d5d">MOTOR</span> LEFT and RIGHT control pins
+                        </div>
+                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="islr">
+                            initialize <span style="color: #c77dff">SENSOR</span> LEFT and RIGHT control pins
+                        </div>
+                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="reader">
+                            read <span style="color: #c77dff">SENSOR</span> (LEFT & RIGHT)
+                        </div>
+                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="if1">
+                            if <span style="color: #c77dff">SENSOR</span> RIGHT == white, and if <span style="color: #c77dff">SENSOR</span> LEFT == white -->
+                        </div>
+                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="if2">
+                            if <span style="color: #c77dff">SENSOR</span> RIGHT == white, and if <span style="color: #c77dff">SENSOR</span> LEFT == black -->
+                        </div>
+                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="if3">
+                            if <span style="color: #c77dff">SENSOR</span> RIGHT == black, and if <span style="color: #c77dff">SENSOR</span> LEFT == white -->
+                        </div>
+                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="mrf1">
+                            move <span style="color: #ff5d5d">MOTOR</span> RIGHT forwards
+                        </div>
+                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="mrf2">
+                            move <span style="color: #ff5d5d">MOTOR</span> RIGHT forwards
+                        </div>
+                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="mrl1">
+                            move <span style="color: #ff5d5d">MOTOR</span> LEFT forwards
+                        </div>
+                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="mrl2">
+                            move <span style="color: #ff5d5d">MOTOR</span> LEFT forwards
+                        </div>
+                    </div>
+                </div>
+                <div class="codingSectionRight" ondragover="event.preventDefault()" ondrop="drop(event, 'right')">
+                    <div class="functionBox">
+                        <div class="functionTitle">FUNCTION <span style="color:white">: setup {</span></div>
+                        <div class="functionContent" id="setup" ondragover="event.preventDefault()" ondrop="drop(event, 'setup')"></div>
+                        <div class="functionTitle"><span style="color:white">}</span></div>
+                        <div class="functionTitle">FUNCTION <span style="color:white">: loop {</span></div>
+                        <div class="functionContent" id="loop" ondragover="event.preventDefault()" ondrop="drop(event, 'loop')"></div>
+                        <div class="functionTitle"><span style="color:white">}</span></div>
+                        <div id="codeStatus" class="copyBox correct" onclick="handleCopyCode()">✓ Copy Code</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add content for coding slide here -->
+        </div>
+    </div>
+    <div class="arrowRight" onclick="changeSlide(1)">-></div>
+    
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const mainContainer = document.querySelector('.main-container');
+        let arrLeft = document.querySelector('.arrowLeft');
+        let arrRight = document.querySelector('.arrowRight');
+        arrLeft.style.background = '#0e1117ff';
+        arrRight.style.background = '#cccccc';
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = 0;
+            if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+            slides[currentSlide].classList.add('active');
+            if (currentSlide == 2){
+                mainContainer.style.width = '1000px';
+            } else {
+                mainContainer.style.width = '450px';
+            }
+            if (currentSlide == 0){
+                arrLeft.style.background = '#0e1117ff';
+                arrRight.style.background = '#cccccc';
+            } else if (currentSlide == 1){
+                arrLeft.style.background = '#cccccc';
+                arrRight.style.background = '#cccccc';
+            } else if (currentSlide == 2){
+                arrLeft.style.background = '#cccccc';
+                arrRight.style.background = '#0e1117ff';
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            slides[currentSlide].classList.add('active');
+        });
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        function drop(ev, target) {
+            ev.preventDefault();
+            const data = ev.dataTransfer.getData("text");
+            const block = document.getElementById(data);
+            // Always allow drop into setup or loop
+            if (target === "setup" || target === "loop") {
+                document.getElementById(target).appendChild(block);
+                return;
+            }
+            // Allow drop into original coding blocks section
+            if (target === "left") {
+                document.querySelector(".codingBlocks").appendChild(block);
+                return;
+            }
+            // Allow drop into if blocks only
+            let dropTarget = ev.target;
+            while (dropTarget && !dropTarget.classList.contains("codeBlock")) {
+                dropTarget = dropTarget.parentElement;
+            }
+            if (dropTarget && dropTarget.id.startsWith("if")) {
+                dropTarget.appendChild(block);
+                return;
+            }
+        }
+    </script>
+</body>
+</html>
