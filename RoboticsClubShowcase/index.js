@@ -60,70 +60,96 @@ function handleCopyCode() {
     if (!checkCodeCorrectness()) return;
 
     const code = `
-    #define IR_SENSOR_RIGHT 11  // Right IR sensor connected to pin 11
-    #define IR_SENSOR_LEFT 12   // Left IR sensor connected to pin 12
-    #define MOTOR_SPEED 50  // Base speed of the motors
+// IR sensors
+#define IR_SENSOR_RIGHT 11  
+#define IR_SENSOR_LEFT  12  
 
-    int rightMotorPinA = 7;   // Right motor direction control pin 1
-    int rightMotorPinB = 8;   // Right motor direction control pin 2
-    int leftMotorPinA = 9;    // Left motor direction control pin 1
-    int leftMotorPinB = 10;   // Left motor direction control pin 2
+// MOTOR_SPEED: what fraction of each cycle the motor is ON  
+//   0 -> always off, 100 -> always on  
+#define MOTOR_SPEED   80    // percent duty cycle (try 20..80)
 
-    void setup()
-    {
-    TCCR0B = TCCR0B & B11111000 | B00000010;
+// PWM_PERIOD: length of each on/off cycle in milliseconds  
+//   smaller = smoother but more CPU blocking  
+#define PWM_PERIOD    20    // ms
 
-    pinMode(rightMotorPinA, OUTPUT);
-    pinMode(rightMotorPinB, OUTPUT);
-    pinMode(leftMotorPinA, OUTPUT);
-    pinMode(leftMotorPinB, OUTPUT);
+// motor driver pins
+int rightMotorPin1 = 7;
+int rightMotorPin2 = 8;
+int leftMotorPin1  = 9;
+int leftMotorPin2  = 10;
 
-    pinMode(IR_SENSOR_RIGHT, INPUT);
-    pinMode(IR_SENSOR_LEFT, INPUT);
+void setup() {
+  pinMode(rightMotorPin1, OUTPUT);
+  pinMode(rightMotorPin2, OUTPUT);
+  pinMode(leftMotorPin1,  OUTPUT);
+  pinMode(leftMotorPin2,  OUTPUT);
 
+  pinMode(IR_SENSOR_RIGHT, INPUT);
+  pinMode(IR_SENSOR_LEFT,  INPUT);
+
+  // ensure motors are stopped
+  rotateMotor(0, 0);
+}
+
+void loop() {
+  // read IRs
+  bool obsR = digitalRead(IR_SENSOR_RIGHT);
+  bool obsL = digitalRead(IR_SENSOR_LEFT);
+
+  // decide drive direction flags (1 = forward, 0 = stop)
+  int driveR = 0, driveL = 0;
+  if (!obsR && !obsL) {
+    // both clear → forward
+    driveR = driveL = 1;
+  }
+  else if (obsR && !obsL) {
+    // obstacle on right → turn left
+    driveR = 1; driveL = 0;
+  }
+  else if (!obsR && obsL) {
+    // obstacle on left → turn right
+    driveR = 0; driveL = 1;
+  }
+  // else both blocked → driveR=driveL=0
+
+  if (driveR || driveL) {
+    // compute on/off times
+    unsigned long onTime  = (MOTOR_SPEED * PWM_PERIOD) / 100;
+    unsigned long offTime = PWM_PERIOD - onTime;
+
+    // ON phase
+    rotateMotor(driveR, driveL);
+    delay(onTime);
+
+    // OFF phase
     rotateMotor(0, 0);
-    }
+    delay(offTime);
+  }
+  else {
+    // fully stopped
+    rotateMotor(0, 0);
+    // you could add a small delay here to debounce sensors
+  }
+}
 
-    void loop()
-    {
-    int rightIRSensorValue = digitalRead(IR_SENSOR_RIGHT);
-    int leftIRSensorValue = digitalRead(IR_SENSOR_LEFT);
-
-    if (rightIRSensorValue == LOW && leftIRSensorValue == LOW) {
-        rotateMotor(MOTOR_SPEED, MOTOR_SPEED);
-    } else if (rightIRSensorValue == HIGH && leftIRSensorValue == LOW) {
-        rotateMotor(MOTOR_SPEED, 0);
-    } else if (rightIRSensorValue == LOW && leftIRSensorValue == HIGH) {
-        rotateMotor(0, MOTOR_SPEED);
-    } else {
-        rotateMotor(0, 0);
-    }
-    }
-
-    void rotateMotor(int rightMotorSpeed, int leftMotorSpeed)
-    {
-    if (rightMotorSpeed < 0) {
-        digitalWrite(rightMotorPinB, LOW);
-        digitalWrite(rightMotorPinA, HIGH);
-    } else if (rightMotorSpeed > 0) {
-        digitalWrite(rightMotorPinB, HIGH);
-        digitalWrite(rightMotorPinA, LOW);
-    } else {
-        digitalWrite(rightMotorPinB, LOW);
-        digitalWrite(rightMotorPinA, LOW);
-    }
-
-    if (leftMotorSpeed > 0) {
-        digitalWrite(leftMotorPinA, LOW);
-        digitalWrite(leftMotorPinB, HIGH);
-    } else if (leftMotorSpeed < 0) {
-        digitalWrite(leftMotorPinA, HIGH);
-        digitalWrite(leftMotorPinB, LOW);
-    } else {
-        digitalWrite(leftMotorPinA, LOW);
-        digitalWrite(leftMotorPinB, LOW);
-    }
-    }
+void rotateMotor(int rightOn, int leftOn) {
+  // right motor
+  if (rightOn) {
+    digitalWrite(rightMotorPin2, HIGH);
+    digitalWrite(rightMotorPin1, LOW);
+  } else {
+    digitalWrite(rightMotorPin2, LOW);
+    digitalWrite(rightMotorPin1, LOW);
+  }
+  // left motor
+  if (leftOn) {
+    digitalWrite(leftMotorPin1, HIGH);
+    digitalWrite(leftMotorPin2, LOW);
+  } else {
+    digitalWrite(leftMotorPin1, LOW);
+    digitalWrite(leftMotorPin2, LOW);
+  }
+}
     `
 .trim();
     navigator.clipboard.writeText(code);
