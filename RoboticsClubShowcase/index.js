@@ -66,7 +66,7 @@ function handleCopyCode() {
 
 // MOTOR_SPEED: what fraction of each cycle the motor is ON  
 //   0 -> always off, 100 -> always on  
-#define MOTOR_SPEED   80    // percent duty cycle (try 20..80)
+#define MOTOR_SPEED   60    // percent duty cycle (try 20..80)
 
 // PWM_PERIOD: length of each on/off cycle in milliseconds  
 //   smaller = smoother but more CPU blocking  
@@ -149,8 +149,7 @@ void rotateMotor(int rightOn, int leftOn) {
     digitalWrite(leftMotorPin1, LOW);
     digitalWrite(leftMotorPin2, LOW);
   }
-}
-    `
+} `
 .trim();
     navigator.clipboard.writeText(code);
 }

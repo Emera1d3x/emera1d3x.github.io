@@ -28,20 +28,17 @@
             <div class="codingSections">
                 <div class="codingSectionLeft" ondragover="event.preventDefault()" ondrop="drop(event, 'left')">
                     <div class="codingBlocks">
-                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="imlr">
-                            initialize <span style="color: #ff5d5d">MOTOR</span> LEFT and RIGHT control pins
+                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="reader">
+                            read <span style="color: #c77dff">SENSOR</span> (LEFT & RIGHT)
                         </div>
                         <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="islr">
                             initialize <span style="color: #c77dff">SENSOR</span> LEFT and RIGHT control pins
                         </div>
-                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="reader">
-                            read <span style="color: #c77dff">SENSOR</span> (LEFT & RIGHT)
-                        </div>
-                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="if1">
-                            if <span style="color: #c77dff">SENSOR</span> RIGHT == white, and if <span style="color: #c77dff">SENSOR</span> LEFT == white -->
-                        </div>
                         <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="if2">
                             if <span style="color: #c77dff">SENSOR</span> RIGHT == white, and if <span style="color: #c77dff">SENSOR</span> LEFT == black -->
+                        </div>
+                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="mrl2">
+                            move <span style="color: #ff5d5d">MOTOR</span> LEFT forwards
                         </div>
                         <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="if3">
                             if <span style="color: #c77dff">SENSOR</span> RIGHT == black, and if <span style="color: #c77dff">SENSOR</span> LEFT == white -->
@@ -55,8 +52,11 @@
                         <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="mrl1">
                             move <span style="color: #ff5d5d">MOTOR</span> LEFT forwards
                         </div>
-                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="mrl2">
-                            move <span style="color: #ff5d5d">MOTOR</span> LEFT forwards
+                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="imlr">
+                            initialize <span style="color: #ff5d5d">MOTOR</span> LEFT and RIGHT control pins
+                        </div>
+                        <div class="codeBlock" draggable="true" ondragstart="drag(event)" id="if1">
+                            if <span style="color: #c77dff">SENSOR</span> RIGHT == white, and if <span style="color: #c77dff">SENSOR</span> LEFT == white -->
                         </div>
                     </div>
                 </div>
