@@ -496,3 +496,127 @@ input:checked + .slider2:before {
     justify-content: center;
     font-family: headingFont;
 }
+/* Responsive layout adjustments */
+@media (max-width: 1000px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        order: 2;
+    }
+
+    .simulation {
+        width: 100%;
+        padding: 10px;
+        order: 1;
+    }
+
+    .simulation-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .input-section, .function-section, .output-section {
+        width: 100%;
+        height: auto;
+    }
+
+    .function-box, .output-box {
+        height: 30vh;
+    }
+
+    .functions {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .functions > div {
+        width: 45%;
+        height: auto;
+    }
+
+    .functionsImage {
+        height: auto;
+        max-height: 10vh;
+    }
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .logo {
+        height: 10vh;
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 5vw;
+        margin: 1vh 0;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .nav-links button {
+        font-size: 2.5vh;
+        width: auto;
+        padding: 0.5vh 2vw;
+    }
+
+    .simulation-title-thing {
+        display: none;
+    }
+
+    .simulation-title {
+        font-size: 4vh;
+    }
+
+    .numberInput1Text, .numberInput2Text {
+        font-size: 3vh;
+    }
+
+    .posterImage {
+        width: 95vw;
+    }
+
+    .title {
+        font-size: 4vw;
+        margin-left: 5vw;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .title {
+        font-size: 6vw;
+    }
+
+    .functions > div {
+        width: 100%;
+    }
+
+    .function-default-text {
+        font-size: 2vh;
+        text-align: center;
+    }
+
+    .output-picture {
+        height: auto;
+        max-height: 25vh;
+    }
+}
